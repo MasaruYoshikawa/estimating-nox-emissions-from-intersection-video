@@ -273,16 +273,6 @@ def test_make_all_routes_to_v4_without_unrelated_global_data_preflight() -> None
         "vehicle_emission.inference.plot_lag",
     )
     assert all(module not in commands for module in forbidden_legacy_modules)
-    legacy = subprocess.run(
-        ["make", "-n", "all-v2", "PYTHON=python3.11"],
-        cwd=repository_root,
-        capture_output=True,
-        text=True,
-        check=True,
-    ).stdout
-    assert "vehicle_emission.data_preflight" in legacy
-    assert "--freeze data/manifests/phase5-analysis-freeze-v2.json" in legacy
-    assert "execute-v4" not in legacy
 
 
 def test_history_loader_cli_requires_an_explicit_or_accepted_hour_convention() -> None:

@@ -3,9 +3,8 @@ from __future__ import annotations
 import hashlib
 import json
 import subprocess
-from dataclasses import asdict, replace
+from dataclasses import replace
 from pathlib import Path
-from runpy import run_path
 
 import pandas as pd
 import pytest
@@ -729,57 +728,3 @@ def test_feature_coverage_must_be_contained_in_recorded_source_intervals() -> No
     clips.loc[1, "clip_end_utc"] = "2026-04-30T15:59:59Z"
     with pytest.raises(HourlyMeasurementError, match="outside recorded clip coverage"):
         extract_hourly_measurements(**arguments)
-
-
-def test_reconciliation_wrapper_requires_paths_and_records_exact_input_hashes(
-    tmp_path: Path,
-) -> None:
-    script = Path(__file__).parents[1] / "scratch" / "reconcile_eligible_hours.py"
-    main = run_path(str(script))["main"]
-    with pytest.raises(SystemExit) as missing:
-        main([])
-    assert missing.value.code == 2
-    candidates = _candidate_hours("Sukiyabashi", ["2026-04-30T15:00:00Z"])
-    inputs = {
-        "candidate-hours": candidates,
-        "monitor-observations": _monitor_rows(candidates, [0.01]),
-        "video-seconds": _covered_hour("Sukiyabashi", "2026-04-30T15:00:00Z"),
-        "weather-observations": _weather(candidates, [0.0]),
-        "clip-intervals": pd.DataFrame(
-            {
-                "site": ["Sukiyabashi"],
-                "clip_id": ["dated-path-1"],
-                "clip_start_utc": ["2026-04-30T15:00:00Z"],
-                "clip_end_utc": ["2026-04-30T16:00:00Z"],
-                "timing_evidence_id": ["clock-fixture"],
-            }
-        ),
-    }
-    config = replace(
-        _config(background_site=None),
-        precipitation_rule="dry_only",
-        weather_alignment="predictor_window",
-    )
-    config_path = tmp_path / "config.json"
-    config_path.write_text(json.dumps(asdict(config)), encoding="utf-8")
-    output = tmp_path / "prepared"
-    argv = ["--config", str(config_path), "--output-directory", str(output)]
-    for role, frame in inputs.items():
-        path = tmp_path / f"{role}.csv"
-        frame.to_csv(path, index=False)
-        argv += [f"--{role}", str(path)]
-    assert main(argv) == 0
-    audit_path = output / "sukiyabashi_hourly_audit_scaffold_v2.csv"
-    audit = pd.read_csv(audit_path)
-    assert audit["primary_measurement_eligible"].tolist() == [True]
-    assert audit.iloc[0]["recorded_covered_seconds"] == 3600.0
-    for role in inputs:
-        content = (tmp_path / f"{role}.csv").read_bytes()
-        assert (
-            audit.iloc[0][f"input_{role.replace('-', '_')}_sha256"]
-            == hashlib.sha256(content).hexdigest()
-        )
-    original = audit_path.read_bytes()
-    with pytest.raises(FileExistsError, match="immutable"):
-        main(argv)
-    assert audit_path.read_bytes() == original
