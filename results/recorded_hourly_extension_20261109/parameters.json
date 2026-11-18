@@ -1,0 +1,77 @@
+{
+  "background_time": "Setagaya_actual_same_hour",
+  "base_panel_float_parser": "round_trip_preserves_stored_binary_values",
+  "block_lengths": [
+    1,
+    7
+  ],
+  "core_family_size": 10,
+  "core_interval_family": "two_models_two_sites_associations_and_paired_advantages",
+  "core_resamples": 20000,
+  "extension_interval_family": "pointwise_descriptive",
+  "extension_resamples": 2000,
+  "input_paths": {
+    "EmsRate_1.csv": "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/EmsRate_1.csv",
+    "EmsRate_13.csv": "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/EmsRate_13.csv",
+    "EmsRate_2.csv": "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/EmsRate_2.csv",
+    "EmsRate_6.csv": "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/EmsRate_6.csv",
+    "VehicleSrcCoeff.csv": "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/VehicleSrcCoeff.csv",
+    "air_pollution_history": "build/source_export_20261022/raw_source_export/air_pollution_history.csv",
+    "base_controls": "results/recorded_hourly_reanalysis_20261109/temporal_controls.csv",
+    "base_panel": "results/recorded_hourly_reanalysis_20261109/recorded_hourly_panel.csv",
+    "base_receipt": "results/recorded_hourly_reanalysis_20261109/receipt.json",
+    "entering_count_audit": "build/source_export_20261022/raw_source_export/entering_count_audit.csv",
+    "entering_counts": "build/source_export_20261022/raw_source_export/entering_counts.csv",
+    "source_manifest": "build/source_export_20261022/raw_source_export/manifest.json",
+    "video_emissions": "build/source_export_20261022/raw_source_export/video_emissions.csv",
+    "video_master": "build/source_export_20261022/raw_source_export/video_master.csv",
+    "weather_history": "build/source_export_20261022/raw_source_export/weather_history.csv"
+  },
+  "input_sha256": {
+    "EmsRate_1.csv": "5ff9907e2d1bbbbf1a86326efa093dfb739a94bf617a221dbc422ada4d2c6228",
+    "EmsRate_13.csv": "71d76d7b029f8377f49d0729e149c44e5f95b40d6b42caddf13efe96fb5b4385",
+    "EmsRate_2.csv": "a8b4a59d3313fe0824e587762020b2c32ab7981437cb71a39685fd081edaa623",
+    "EmsRate_6.csv": "0513556d1687e905d0e1f8c1975e296a87e558d23d279b5a6a89c42c25e0550f",
+    "VehicleSrcCoeff.csv": "c4371d1cd86b762b8bf685ee15bba3bc24b41f811d05bd4d9d41d81c40a512c2",
+    "air_pollution_history": "006bbfe5b1895d10ba2c30a6d0f55580e8f5b01e8cf9ed8b09724fa56f99792f",
+    "base_controls": "833d6ca78dc3c26658b5a74349ce953f6af8e79bde20387a2b812c1e7db917e0",
+    "base_panel": "11d9828b677a309dd45c438c74d194d6120c6e2c74fa8f7b2c7678f6456cf5ae",
+    "base_receipt": "f48d4664592df50fd94950f8b7e7c03ef3c00a89684626064a5085e52e2e06c7",
+    "entering_count_audit": "3a86ad3c5c932842323c2868c13808370fbf24980b26dc63ff8516a2372c05b2",
+    "entering_counts": "b905540f86e00d6b896f9b1bb311d4b6f2edde92f995945d19223e014cec9b1e",
+    "source_manifest": "09c9321cca028f9ef9150b7df553c873e5000266c47c5bf70aa85419889f758b",
+    "video_emissions": "d648e6719c9be41b688d7a28d2b23a94dd62048ee650f50e495505a8240ac9a4",
+    "video_master": "0efe7fe9153adc316f3ef5673edc21930fd56b8e107457604e9e68f8d9afea7e",
+    "weather_history": "e4eeb32bf40cde37120aea985f373c0288d53b0f7a332e414dfe0e7611d89168"
+  },
+  "minimum_residual_degrees_of_freedom": 3,
+  "residual_calendar": "fixed_hour_JST_and_weekday_indicator_columns",
+  "residual_estimator": "Pearson_correlation_of_OLS_residuals_of_within_sample_average_ranks",
+  "residual_regional": [
+    "ranked_temperature",
+    "ranked_wind_speed",
+    "ranked_setagaya_nox_ppm"
+  ],
+  "residual_stages": [
+    "marginal",
+    "calendar",
+    "calendar_traffic",
+    "calendar_traffic_regional"
+  ],
+  "residual_support": "common_complete_case_all_stages",
+  "residual_traffic": [
+    "ranked_profile_volume",
+    "ranked_bus_share",
+    "ranked_heavy_truck_share",
+    "ranked_light_truck_share"
+  ],
+  "seed": 42,
+  "source_validation": "not_assessed_by_this_statistical_extension",
+  "status": "recorded_aggregate_information_extension",
+  "stored_clip_speed_definition": "mean_of_speed_rows_at_least_1_kmh_else_all_rows_mean",
+  "volatility": "sample_SD_over_mean_across_MOVEStar_clip_average_speeds",
+  "volatility_split": "site_median_recomputed_each_draw_ties_lower",
+  "volatility_zero_mean": "undefined_excluded_only_from_volatility_comparison",
+  "weather_time": "temperature_and_wind_observations_at_monitor_interval_start",
+  "weighted_count_reference": "MOVEStar_steady_25kmh_zero_acceleration_normalised_to_car"
+}

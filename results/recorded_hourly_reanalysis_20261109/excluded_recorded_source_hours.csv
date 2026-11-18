@@ -1,0 +1,5 @@
+site,monitor_start_utc,video_id,video_path,reason
+Sukiyabashi,2026-05-29T10:00:00Z,1,data\raw_video\counting_test1\count1.mp4,contains_explicit_counting_test_record
+Sukiyabashi,2026-05-29T10:00:00Z,2,data\raw_video\counting_test2\count2.mp4,contains_explicit_counting_test_record
+Sukiyabashi,2026-06-15T09:00:00Z,3,data\raw_video\counting_test3\count3.mp4,contains_explicit_counting_test_record
+Sukiyabashi,2026-06-26T11:00:00Z,7,data\raw_video\counting_test7\count7.mp4,contains_explicit_counting_test_record

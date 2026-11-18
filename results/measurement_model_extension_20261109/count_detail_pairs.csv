@@ -1,0 +1,97 @@
+site,kind,clip,category,manual_count,automated_count,signed_difference,absolute_difference
+Sukiyabashi,classification,1,Bus,7,8,1,1
+Sukiyabashi,classification,1,Car,106,89,-17,17
+Sukiyabashi,classification,1,Heavy truck,1,1,0,0
+Sukiyabashi,classification,1,Light truck,28,31,3,3
+Sukiyabashi,classification,2,Bus,2,2,0,0
+Sukiyabashi,classification,2,Car,234,234,0,0
+Sukiyabashi,classification,2,Heavy truck,1,1,0,0
+Sukiyabashi,classification,2,Light truck,0,1,1,1
+Sukiyabashi,classification,3,Bus,6,8,2,2
+Sukiyabashi,classification,3,Car,76,84,8,8
+Sukiyabashi,classification,3,Heavy truck,3,3,0,0
+Sukiyabashi,classification,3,Light truck,17,17,0,0
+Sukiyabashi,classification,4,Bus,11,11,0,0
+Sukiyabashi,classification,4,Car,210,215,5,5
+Sukiyabashi,classification,4,Heavy truck,1,1,0,0
+Sukiyabashi,classification,4,Light truck,18,21,3,3
+Sukiyabashi,classification,5,Bus,15,16,1,1
+Sukiyabashi,classification,5,Car,303,300,-3,3
+Sukiyabashi,classification,5,Heavy truck,1,0,-1,1
+Sukiyabashi,classification,5,Light truck,11,9,-2,2
+Sukiyabashi,classification,6,Bus,0,0,0,0
+Sukiyabashi,classification,6,Car,78,73,-5,5
+Sukiyabashi,classification,6,Heavy truck,1,2,1,1
+Sukiyabashi,classification,6,Light truck,2,1,-1,1
+Sukiyabashi,classification,7,Bus,9,10,1,1
+Sukiyabashi,classification,7,Car,326,327,1,1
+Sukiyabashi,classification,7,Heavy truck,2,4,2,2
+Sukiyabashi,classification,7,Light truck,31,42,11,11
+Sukiyabashi,entering,1,Left,9,11,2,2
+Sukiyabashi,entering,1,Right,11,10,-1,1
+Sukiyabashi,entering,1,Top,44,40,-4,4
+Sukiyabashi,entering,1,Bottom,70,68,-2,2
+Sukiyabashi,entering,2,Left,28,26,-2,2
+Sukiyabashi,entering,2,Right,43,41,-2,2
+Sukiyabashi,entering,2,Top,103,102,-1,1
+Sukiyabashi,entering,2,Bottom,67,67,0,0
+Sukiyabashi,entering,3,Left,14,12,-2,2
+Sukiyabashi,entering,3,Right,13,13,0,0
+Sukiyabashi,entering,3,Top,29,28,-1,1
+Sukiyabashi,entering,3,Bottom,54,57,3,3
+Sukiyabashi,entering,4,Left,27,28,1,1
+Sukiyabashi,entering,4,Right,33,33,0,0
+Sukiyabashi,entering,4,Top,86,85,-1,1
+Sukiyabashi,entering,4,Bottom,102,98,-4,4
+Sukiyabashi,entering,5,Left,50,52,2,2
+Sukiyabashi,entering,5,Right,46,44,-2,2
+Sukiyabashi,entering,5,Top,117,117,0,0
+Sukiyabashi,entering,5,Bottom,116,112,-4,4
+Sukiyabashi,entering,6,Left,12,12,0,0
+Sukiyabashi,entering,6,Right,11,12,1,1
+Sukiyabashi,entering,6,Top,29,27,-2,2
+Sukiyabashi,entering,6,Bottom,28,27,-1,1
+Sukiyabashi,entering,7,Left,51,52,1,1
+Sukiyabashi,entering,7,Right,81,78,-3,3
+Sukiyabashi,entering,7,Top,102,104,2,2
+Sukiyabashi,entering,7,Bottom,136,132,-4,4
+Shinjuku,classification,1,Bus,0,0,0,0
+Shinjuku,classification,1,Car,108,110,2,2
+Shinjuku,classification,1,Heavy truck,0,2,2,2
+Shinjuku,classification,1,Light truck,27,35,8,8
+Shinjuku,classification,2,Bus,7,4,-3,3
+Shinjuku,classification,2,Car,184,195,11,11
+Shinjuku,classification,2,Heavy truck,1,0,-1,1
+Shinjuku,classification,2,Light truck,47,51,4,4
+Shinjuku,classification,3,Bus,4,3,-1,1
+Shinjuku,classification,3,Car,252,253,1,1
+Shinjuku,classification,3,Heavy truck,3,2,-1,1
+Shinjuku,classification,3,Light truck,3,6,3,3
+Shinjuku,classification,4,Bus,5,5,0,0
+Shinjuku,classification,4,Car,177,179,2,2
+Shinjuku,classification,4,Heavy truck,0,0,0,0
+Shinjuku,classification,4,Light truck,10,11,1,1
+Shinjuku,classification,5,Bus,8,7,-1,1
+Shinjuku,classification,5,Car,191,188,-3,3
+Shinjuku,classification,5,Heavy truck,1,0,-1,1
+Shinjuku,classification,5,Light truck,13,13,0,0
+Shinjuku,entering,1,Left,3,3,0,0
+Shinjuku,entering,1,Right,24,25,1,1
+Shinjuku,entering,1,Top,59,70,11,11
+Shinjuku,entering,1,Bottom,48,49,1,1
+Shinjuku,entering,2,Left,10,8,-2,2
+Shinjuku,entering,2,Right,35,43,8,8
+Shinjuku,entering,2,Top,107,111,4,4
+Shinjuku,entering,2,Bottom,91,88,-3,3
+Shinjuku,entering,3,Left,11,11,0,0
+Shinjuku,entering,3,Right,17,19,2,2
+Shinjuku,entering,3,Top,85,87,2,2
+Shinjuku,entering,3,Bottom,148,148,0,0
+Shinjuku,entering,4,Left,15,15,0,0
+Shinjuku,entering,4,Right,17,18,1,1
+Shinjuku,entering,4,Top,94,97,3,3
+Shinjuku,entering,4,Bottom,65,65,0,0
+Shinjuku,entering,5,Left,7,7,0,0
+Shinjuku,entering,5,Right,32,33,1,1
+Shinjuku,entering,5,Top,110,110,0,0
+Shinjuku,entering,5,Bottom,65,58,-7,7

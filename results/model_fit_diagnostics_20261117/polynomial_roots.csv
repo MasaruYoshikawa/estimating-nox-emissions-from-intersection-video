@@ -1,0 +1,7 @@
+scenario,vehicle_type,vehicle_class,positive_polynomial_root_kw_per_tonne,steady_speed_at_root_kmh,root_above_fit_range
+original,1,Passenger car,2.0419793316468966,43.216854664543455,False
+original,2,Light truck,2.9865774703950234,50.441911716485329,False
+original,6,Bus,67.771073930635637,241.68900965321484,True
+original,13,Heavy truck,2062.0053339995757,729.4358573921495,True
+mode40_from_type_13,6,Bus,2062.0053339995757,769.46776588177579,True
+mode40_from_type_6,13,Heavy truck,67.771073930635637,225.44568713757295,True

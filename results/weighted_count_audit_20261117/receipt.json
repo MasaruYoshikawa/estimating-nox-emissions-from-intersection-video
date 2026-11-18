@@ -1,0 +1,24 @@
+{
+  "absolute_weighted_clip_net_difference": "abs(sum_class(weight * (automated - manual)))",
+  "calculator_sha256": {
+    "weighted_count_audit.py": "538b0f3edf86055f0674a5605e71936b0bd112b0386234aeda94c1492f552e4a"
+  },
+  "inputs": {
+    "results/measurement_model_extension_20261109/count_detail_pairs.csv": "eac9be6a2580fdb2d7195c5f5ed21faadc54f96abb42ddad0407fbec195b417d",
+    "results/measurement_model_extension_20261109/receipt.json": "6a9e6279b6121c125cf2d4832087427733dc03c2c3cbefbc6fec6614b4fa7ec0",
+    "results/recorded_hourly_extension_20261109/class_reference_weights.csv": "52202e11feddfcbe42930a2f977bb1cc599938afa6f4b5f7894f5d7c0e4a97a8",
+    "results/recorded_hourly_extension_20261109/receipt.json": "258418ecb2fe8cd055abf71513d55cbee641ee99560c48cbea7be7a1b44ab3a2"
+  },
+  "observation_unit": "clip--class count pair, not joint class-specific entering events",
+  "outputs": {
+    "weighted_count_cells.csv": "28f84d035b54ad59f802ede9cfcdc6e316d4b43058c00e97d678c4ac82df97c6",
+    "weighted_count_classes.csv": "8ee57eb079631c89ac16f35f63cc6d81791a0c4479dbab49add8e3011879abc9",
+    "weighted_count_clips.csv": "ee37dfadfb26699684dab94aa8d764f0a12249a3c4d019d1eb3d72605cd70ac8",
+    "weighted_count_sites.csv": "9bd38bb7839074b8cc7753ab852721bc628934146e7f2d7d59c3cd3237b44951"
+  },
+  "relative_denominator": "sum(weight * manual) for the same group",
+  "sampling": "descriptive audit of the available clips; no sampling interval",
+  "status": "fixed_weight_manual_class_count_audit",
+  "weighted_absolute_cell_difference": "sum(weight * abs(automated - manual))",
+  "zero_denominator": "relative discrepancy unavailable (empty CSV cell)"
+}

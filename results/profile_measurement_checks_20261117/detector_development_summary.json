@@ -1,0 +1,72 @@
+{
+  "calculator_sha256": "63adf6ceb499b38a213f32c609b73831ea4e4da9c14ba414662bf53a3b88e2ec",
+  "local_evaluation_configuration": {
+    "path": "data/eval_dataset/coco_eval.yaml",
+    "relation_to_training_run_data": "not_established_by_path_strings",
+    "sha256": "bbea3e7dfdf3e3f9b4bac92779ba3743423898d3e20756f69c8fcf303a2015bf",
+    "train_equals_val": true
+  },
+  "runs": {
+    "rtdetr_finetune-4": {
+      "evaluation_role": "development_validation",
+      "final_epoch": 50,
+      "final_metrics": {
+        "map50": 0.94729,
+        "map50_95": 0.82947,
+        "precision": 0.90099,
+        "recall": 0.90915
+      },
+      "independent_test_membership": "not_established_by_training_logs",
+      "input_sha256": {
+        "args.yaml": "65c6b61b39add71fd55f324bd98e648a99a283cf9defb6814e4cceb65b09b5c4",
+        "results.csv": "e9aee29be08ddf7ee04eb1d32f5884225acccb940a8e59654f1b8bb16adf567f"
+      },
+      "logged_epochs": 50,
+      "maximum_logged_map50_95": 0.82947,
+      "maximum_logged_map50_95_epoch": 50,
+      "production_checkpoint_linkage": "not_established_by_training_logs",
+      "training_arguments": {
+        "batch": 4,
+        "data": "D:\\Development\\Estimating-Vehicle-Emissions-from-Intersection-Traffic-Video-main\\data\\train_dataset\\coco_train.yaml",
+        "deterministic": true,
+        "epochs": 50,
+        "imgsz": 640,
+        "model": "D:\\Development\\Estimating-Vehicle-Emissions-from-Intersection-Traffic-Video-main\\runs\\rtdetr_finetune-3\\weights\\best.pt",
+        "seed": 0,
+        "split": "val",
+        "val": true
+      }
+    },
+    "rtdetr_shinjuku": {
+      "evaluation_role": "development_validation",
+      "final_epoch": 50,
+      "final_metrics": {
+        "map50": 0.76265,
+        "map50_95": 0.62581,
+        "precision": 0.84249,
+        "recall": 0.71436
+      },
+      "independent_test_membership": "not_established_by_training_logs",
+      "input_sha256": {
+        "args.yaml": "ce74e7c28c7317f9069a53041da9ee12a7e0faaeb012649ee369f52656bef622",
+        "results.csv": "1987ed774372dca1b9934023d9891233db67850e498883dc490985bc10313d52"
+      },
+      "logged_epochs": 50,
+      "maximum_logged_map50_95": 0.62675,
+      "maximum_logged_map50_95_epoch": 49,
+      "production_checkpoint_linkage": "not_established_by_training_logs",
+      "training_arguments": {
+        "batch": 4,
+        "data": "D:\\Antigravity\\Estimating-Vehicle-Emissions-from-Intersection-Traffic-Video-main\\data\\shinjuku_train_dataset\\shinjuku_data.yaml",
+        "deterministic": true,
+        "epochs": 50,
+        "imgsz": 640,
+        "model": "D:\\Antigravity\\Estimating-Vehicle-Emissions-from-Intersection-Traffic-Video-main\\runs\\rtdetr_finetune-4\\weights\\best.pt",
+        "seed": 0,
+        "split": "val",
+        "val": true
+      }
+    }
+  },
+  "schema_version": "detector_development_summary_v1"
+}

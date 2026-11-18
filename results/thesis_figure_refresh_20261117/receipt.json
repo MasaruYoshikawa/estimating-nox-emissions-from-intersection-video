@@ -1,0 +1,58 @@
+{
+  "calculator_sha256": {
+    "/Users/macuser/Developer/vehicle-emission-project/scripts/refresh_thesis_figures.py": "2bb9e1904352d13c19544087e15ad61cf087116f4421b54dc38e5bf5f3581549",
+    "/Users/macuser/Developer/vehicle-emission-project/scripts/thesis_ordering_figures.py": "412843fb6ed6a229e7a04c792cf803fca5a9421053193731b7d044cddb8b0120",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/inference/recorded_hourly_extension.py": "901b757c3cad81958163b8c965f8e9a480a5afbf16c6529d480792ec2da2cfbf",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/inference/recorded_hourly_reanalysis.py": "54b5c6210f1adf652b4cafdab8af55fcdffc496ada33de537428b14817f046bd",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/measurement/thesis_diagnostics.py": "3534559ca1b166e4dadeade54eee551b8f8900916154a320280f51a6ac3480be",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/comparisons.py": "f714a6877dec0c91cfd59002bd84f7449e9fb63e34f2ce99b38923127304f122",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/evidence.py": "bfbdb2a0c19418b40bf7170ff9e99ef3a96db31f0a54e18e7eb20600dab86f09",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/thesis_figures.py": "cef0775eacf8a68af1392bdb3b892afc159a567e1bef384b125e9ca1b6da8958"
+  },
+  "float_parser": "round_trip",
+  "inputs": {
+    "/Users/macuser/Developer/vehicle-emission-project/pyproject.toml": "4013e2d40f80281cad7f63c1591f4ee85e20b6e29c5a8905eafe11a5a03061dd",
+    "/Users/macuser/Developer/vehicle-emission-project/requirements-dev.lock": "f82e100cc0d6bea0faafb5ddcf294e7b389dd1ca729413bf969d468309db85e1",
+    "results/measurement_model_extension_20261109/count_detail_pairs.csv": "eac9be6a2580fdb2d7195c5f5ed21faadc54f96abb42ddad0407fbec195b417d",
+    "results/measurement_model_extension_20261109/model_response_states.csv": "9e161d530ddc8ffc1fece2256ce4bc143097e9e2e24127ac15050fc504d5fd9c",
+    "results/measurement_model_extension_20261109/receipt.json": "6a9e6279b6121c125cf2d4832087427733dc03c2c3cbefbc6fec6614b4fa7ec0",
+    "results/model_ordering_20261109/diurnal_profiles_scaled.csv": "6b1b4080a2063d82f143601ddf6a59deb6616ad6280673ea24e21ab8724ba4ad",
+    "results/model_ordering_20261109/model_ordering_panel.csv": "82fdfc0a7becb8c62295470b832ed70578a1adc81d795d93202cfa95d741453a",
+    "results/model_ordering_20261109/receipt.json": "bc7df92efe98a9bdef58a7ed11905740a68d3d8b863ece59c6594743099103b3",
+    "results/recorded_hourly_extension_20261109/class_reference_weights.csv": "52202e11feddfcbe42930a2f977bb1cc599938afa6f4b5f7894f5d7c0e4a97a8",
+    "results/recorded_hourly_extension_20261109/core_inference.csv": "28cb71a86fc8e3437e39e1b044793f6dd00ca4bea35c5331bf5f2de9e9bb287e",
+    "results/recorded_hourly_extension_20261109/count_comparisons.csv": "dd255933e20016b0ec5c5b8e1ca0df9fbef73de9c9c6f39610ea26471e2d5e00",
+    "results/recorded_hourly_extension_20261109/extension_hourly_panel.csv": "384eae3333004af2e96bfe5ff097f4edf89249e00549af8f4070dae66b63ebe5",
+    "results/recorded_hourly_extension_20261109/receipt.json": "258418ecb2fe8cd055abf71513d55cbee641ee99560c48cbea7be7a1b44ab3a2",
+    "results/recorded_hourly_extension_20261109/residual_comparisons.csv": "cc7c78629931e51eb92e241e87a810bed546fee41345bcba39b8549aad59785e",
+    "results/recorded_hourly_extension_20261109/volatility_comparisons.csv": "eaa35ac0b048fc388fc514d5af9902fdd641101d889b93013930de873107be1f",
+    "thesis/figures/fig_model_profile_response_checked_20261109.png": "1da8195ff5812d396470458e335263a77ba9eab6693c9a030d412d6803721e88"
+  },
+  "kind": "thesis_presentation_refresh",
+  "outputs": {
+    "fig_block_comparison.png": "6b9dfe7f32d571f5bfc7959e95c5d2571747e096b91bf4df38dac61d208ad164",
+    "fig_class_response_functions.png": "47cfa38c9f9ce87af37858986b8302c012b84c8e49930b17a421a2ece4c4e799",
+    "fig_core_associations.png": "dd4773255daaa0b09425b172fecf61ddd3dd899ab238c952010e7fa447015ddc",
+    "fig_fleet_count_advantages.png": "a9dd5e1628b7b0467ed29137c7e6799a483b8c7264853d2e146e6627e17c2ad2",
+    "fig_fleet_weighting_contributions.png": "b446e0cb739273b2a5aa1a800be9aaf575448e88bebae03b31404b417de2a843",
+    "fig_hourly_rank_associations.png": "a532ca37660f385a666e33e24f4ce799a87c4555bf723588657c3ddcf20c55ca",
+    "fig_manual_count_discrepancies.png": "6ed38ed174d756e83e25e966616e766b5e12e3b6058f4c47210619e2e47e68c3",
+    "fig_model_profile_response_checked.png": "1da8195ff5812d396470458e335263a77ba9eab6693c9a030d412d6803721e88",
+    "fig_model_rank_disagreement.png": "70dedfed084148c13875a99701c2b5d84eeeec1e987a3060bfd9db066552c3fd",
+    "fig_rank_residual_associations.png": "a4920e00b2024d391847d5e28b557a6f512d0fab3780d65e2314bf506b2e71b1",
+    "fig_recorded_calendar_support.png": "07ebcec722847347e43e3867ad14ecbcbb44f41fc3a4d3aac08b677db3e51638",
+    "fig_recorded_diurnal_profiles.png": "6d29014186e8a456b023038f2b12d654c6a284b29a7492f49f663fe805b788f6",
+    "fig_speed_variability_advantages.png": "c4806710046469bf08eee144e085a78fc34234ae597ec94677877d05de113bd5",
+    "fleet_count_comparisons.csv": "cb95c59f0774441e57989e0bc3b581b22d521c1e6f012984346be52e0ea2d85f",
+    "fleet_weighting_contributions.csv": "b9261b7d7ee2aadb090b6973057493474d6d30e8cfc8d5014aae701ae74df45e",
+    "hourly_rank_points.csv": "be926768cf3f54500b278f64ac639c246d2364806b1c85d177642733ca02996a",
+    "hourly_rank_summary.csv": "f964e6d221a29db4519222cc9288cc372f3c1d33e0dd9173febd5c21f5ba89e3",
+    "speed_variability_comparisons.csv": "03cd969c78cb7449c8267722f0fe3294ea506db830bc7657f6f20861daaebe56"
+  },
+  "preserved_images": {
+    "fig_model_profile_response_checked.png": "thesis/figures/fig_model_profile_response_checked_20261109.png"
+  },
+  "profile_scope": "existing constructed-profile image copied without model execution",
+  "quartiles": "populated predictor quartiles; medians and IQRs are descriptive",
+  "uncertainty": "existing paired intervals; no inference or resampling executed"
+}

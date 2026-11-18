@@ -1,0 +1,21 @@
+{
+  "sites": {
+    "Shinjuku": {
+      "core_days": 56,
+      "core_hours": 555,
+      "residual_common_hours": 553,
+      "volatility_hours": 555,
+      "volatility_median": 0.0771131820617376,
+      "weighted_count_hours": 554
+    },
+    "Sukiyabashi": {
+      "core_days": 60,
+      "core_hours": 593,
+      "residual_common_hours": 590,
+      "volatility_hours": 593,
+      "volatility_median": 0.054571801363988266,
+      "weighted_count_hours": 591
+    }
+  },
+  "status": "recorded_aggregate_information_extension"
+}

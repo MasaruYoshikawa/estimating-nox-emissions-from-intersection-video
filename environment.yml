@@ -1,0 +1,12 @@
+# Canonical Python 3.11 environment. The base environment is portable across
+# CPU and Apple Silicon hosts. Install the pinned ``vision`` extra only on the
+# recorded inference host after its accelerator/runtime compatibility check.
+name: vehicle-emission
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.15
+  - pip=25.0.1
+  - pip:
+      - -r requirements-dev.lock
+      - -e .[dev]

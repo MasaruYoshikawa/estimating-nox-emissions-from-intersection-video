@@ -1,0 +1,34 @@
+{
+  "calculator_sha256": {
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/comparisons.py": "0d0c99591420158751259ec4aed187282db2c40a70cd6b1ee0348dffa4024877",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/evidence.py": "9ebe9162320d140d782e8369e9abf355c1047351c9088c9b501a5a9cf7666f98",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/thesis_figures.py": "cef0775eacf8a68af1392bdb3b892afc159a567e1bef384b125e9ca1b6da8958"
+  },
+  "count_discrepancy": "automated minus manual for every reference clip/category pair",
+  "fleet_shares": "ratios of summed recorded class counts and fixed-weighted counts",
+  "float_parser": "round_trip",
+  "inputs": {
+    "results/measurement_model_extension_20261109/count_detail_pairs.csv": "eac9be6a2580fdb2d7195c5f5ed21faadc54f96abb42ddad0407fbec195b417d",
+    "results/measurement_model_extension_20261109/receipt.json": "6a9e6279b6121c125cf2d4832087427733dc03c2c3cbefbc6fec6614b4fa7ec0",
+    "results/recorded_hourly_extension_20261109/class_reference_weights.csv": "52202e11feddfcbe42930a2f977bb1cc599938afa6f4b5f7894f5d7c0e4a97a8",
+    "results/recorded_hourly_extension_20261109/count_comparisons.csv": "dd255933e20016b0ec5c5b8e1ca0df9fbef73de9c9c6f39610ea26471e2d5e00",
+    "results/recorded_hourly_extension_20261109/extension_hourly_panel.csv": "384eae3333004af2e96bfe5ff097f4edf89249e00549af8f4070dae66b63ebe5",
+    "results/recorded_hourly_extension_20261109/receipt.json": "258418ecb2fe8cd055abf71513d55cbee641ee99560c48cbea7be7a1b44ab3a2",
+    "results/recorded_hourly_extension_20261109/volatility_comparisons.csv": "eaa35ac0b048fc388fc514d5af9902fdd641101d889b93013930de873107be1f"
+  },
+  "kind": "derived_figure_bundle",
+  "outputs": {
+    "fig_fleet_count_advantages.png": "c0e5c216db17fd813ba27c80ca681dc8de51772a71469fcafdc33e46d2919400",
+    "fig_fleet_weighting_contributions.png": "b446e0cb739273b2a5aa1a800be9aaf575448e88bebae03b31404b417de2a843",
+    "fig_hourly_rank_associations.png": "eeac9d7f4a1476baa0ab9d9ab01982d2befe6aafa5ad1df190b4570dcc5ca316",
+    "fig_manual_count_discrepancies.png": "6ed38ed174d756e83e25e966616e766b5e12e3b6058f4c47210619e2e47e68c3",
+    "fig_speed_variability_advantages.png": "4914c8abab999f22d3b51e194816bc1f8a25d30dc1971f2ccb000e5414e625da",
+    "fleet_count_comparisons.csv": "7c7fc9e9dd94b5c2ca7dac0ffbdd4491ca5b4afefc973ab10adb4be8cd36c2bf",
+    "fleet_weighting_contributions.csv": "b9261b7d7ee2aadb090b6973057493474d6d30e8cfc8d5014aae701ae74df45e",
+    "hourly_rank_points.csv": "be926768cf3f54500b278f64ac639c246d2364806b1c85d177642733ca02996a",
+    "hourly_rank_summary.csv": "04943c083d72c17c495a79d58fca40158cd86056527ed0c578d6be41d710570d",
+    "speed_variability_comparisons.csv": "8ea5c59ab6d141bef33ad545a2be79041728164fa268d424b67190074b6ce5ae"
+  },
+  "rank_display": "average rank divided by matched site sample size",
+  "uncertainty": "existing paired pointwise intervals; no new resampling"
+}

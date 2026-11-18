@@ -1,0 +1,5 @@
+site,predictor,predictor_label,n_hours,r_s
+Shinjuku,vt_cpfm_nox_grams,VT-CPFM index,554,0.35972101486224678
+Shinjuku,fixed_rate_weighted_entries,Fixed-weighted count,554,0.32156447665572979
+Sukiyabashi,vt_cpfm_nox_grams,VT-CPFM index,591,0.33112744272226824
+Sukiyabashi,fixed_rate_weighted_entries,Fixed-weighted count,591,0.31330986862029719

@@ -1,0 +1,176 @@
+{
+  "calculator_sha256": {
+    "paired_inference.py": "218f67b35d124784fcd0f066dc3500ede0b331917a7b2468cf97f68a951fe9f1",
+    "recorded_hourly_reanalysis.py": "54b5c6210f1adf652b4cafdab8af55fcdffc496ada33de537428b14817f046bd",
+    "temporal.py": "3b70aa2c10f01beb0186e4e51ba72f810e8b2a045125f4e6832a1222876e52f2"
+  },
+  "captured_clip_count_family": {
+    "baselines": [
+      "captured_clip_entering_count",
+      "captured_clip_bus_heavy_count"
+    ],
+    "family_size": 8,
+    "models": [
+      "movestar_nox_grams",
+      "vt_cpfm_nox_grams"
+    ],
+    "sites": [
+      "Sukiyabashi",
+      "Shinjuku"
+    ]
+  },
+  "captured_clip_count_replay": {
+    "count_window": "whole_captured_clips_assigned_by_recorded_start_hour",
+    "heavy_definition": "canonical_classes_0_and_2_bus_and_heavy_truck",
+    "raw_aggregate_replay": "both_hybrid_indices_and_track_profile_totals_match",
+    "unknown_clip_count_handling": "whole_start_hour_count_unavailable",
+    "validation_material": [
+      {
+        "monitor_start_utc": "2026-05-29T10:00:00Z",
+        "site": "Sukiyabashi",
+        "video_id": 1,
+        "video_path": "data\\raw_video\\counting_test1\\count1.mp4"
+      },
+      {
+        "monitor_start_utc": "2026-05-29T10:00:00Z",
+        "site": "Sukiyabashi",
+        "video_id": 2,
+        "video_path": "data\\raw_video\\counting_test2\\count2.mp4"
+      },
+      {
+        "monitor_start_utc": "2026-06-15T09:00:00Z",
+        "site": "Sukiyabashi",
+        "video_id": 3,
+        "video_path": "data\\raw_video\\counting_test3\\count3.mp4"
+      },
+      {
+        "monitor_start_utc": "2026-06-16T22:00:00Z",
+        "site": "Sukiyabashi",
+        "video_id": 4,
+        "video_path": "data\\raw_video\\counting_test4\\count4.mp4"
+      },
+      {
+        "monitor_start_utc": "2026-06-16T22:00:00Z",
+        "site": "Sukiyabashi",
+        "video_id": 5,
+        "video_path": "data\\raw_video\\counting_test5\\count5.mp4"
+      },
+      {
+        "monitor_start_utc": "2026-06-16T22:00:00Z",
+        "site": "Sukiyabashi",
+        "video_id": 6,
+        "video_path": "data\\raw_video\\counting_test6\\count6.mp4"
+      },
+      {
+        "monitor_start_utc": "2026-06-26T11:00:00Z",
+        "site": "Sukiyabashi",
+        "video_id": 7,
+        "video_path": "data\\raw_video\\counting_test7\\count7.mp4"
+      }
+    ]
+  },
+  "descriptive_correlations": [
+    "vehicle_count",
+    "mean_speed_mps"
+  ],
+  "focal_estimands_per_site": [
+    "movestar_nox_grams",
+    "vt_cpfm_nox_grams",
+    "movestar_minus_recorded_volume",
+    "continuous_minus_recorded_volume",
+    "continuous_minus_movestar"
+  ],
+  "inference": [
+    {
+      "block_length_days": 1,
+      "confidence_level": 0.95,
+      "favourable_min_mps": null,
+      "interval_adjustment": "bonferroni",
+      "interval_method": "percentile",
+      "minimum_site_days": 2,
+      "minimum_site_hours": 3,
+      "minimum_stratum_days": 2,
+      "minimum_stratum_hours": 3,
+      "minimum_valid_resamples": 1000,
+      "opposing_max_mps": null,
+      "primary_family_size": 10,
+      "primary_interval_family": "two_models_two_sites_associations_and_paired_advantages",
+      "resamples": 1000,
+      "resampling_method": "union_calendar_moving_block",
+      "seed": 42,
+      "wind_definition_id": null,
+      "wind_family_size": 2,
+      "wind_interval_family": "not_evaluated",
+      "wind_mode": "unavailable"
+    },
+    {
+      "block_length_days": 7,
+      "confidence_level": 0.95,
+      "favourable_min_mps": null,
+      "interval_adjustment": "bonferroni",
+      "interval_method": "percentile",
+      "minimum_site_days": 2,
+      "minimum_site_hours": 3,
+      "minimum_stratum_days": 2,
+      "minimum_stratum_hours": 3,
+      "minimum_valid_resamples": 1000,
+      "opposing_max_mps": null,
+      "primary_family_size": 10,
+      "primary_interval_family": "two_models_two_sites_associations_and_paired_advantages",
+      "resamples": 1000,
+      "resampling_method": "union_calendar_moving_block",
+      "seed": 42,
+      "wind_definition_id": null,
+      "wind_family_size": 2,
+      "wind_interval_family": "not_evaluated",
+      "wind_mode": "unavailable"
+    }
+  ],
+  "input_paths": {
+    "actual_ambient": "build/source_export_20261022/raw_source_export/air_pollution_history.csv",
+    "entering_count_audit": "build/source_export_20261022/raw_source_export/entering_count_audit.csv",
+    "entering_counts": "build/source_export_20261022/raw_source_export/entering_counts.csv",
+    "raw_manifest": "build/source_export_20261022/raw_source_export/manifest.json",
+    "recorded_panel": "results/v4_all_weather/phase5_hourly_paired_dataset_all_weather.csv",
+    "video_emissions": "build/source_export_20261022/raw_source_export/video_emissions.csv",
+    "video_master": "build/source_export_20261022/raw_source_export/video_master.csv",
+    "weather": "build/source_export_20261022/raw_source_export/weather_history.csv"
+  },
+  "input_sha256": {
+    "actual_ambient": "006bbfe5b1895d10ba2c30a6d0f55580e8f5b01e8cf9ed8b09724fa56f99792f",
+    "entering_count_audit": "3a86ad3c5c932842323c2868c13808370fbf24980b26dc63ff8516a2372c05b2",
+    "entering_counts": "b905540f86e00d6b896f9b1bb311d4b6f2edde92f995945d19223e014cec9b1e",
+    "raw_manifest": "09c9321cca028f9ef9150b7df553c873e5000266c47c5bf70aa85419889f758b",
+    "recorded_panel": "efd97e8d15265e8b1029677cd2ec21eb1a0cc0410dc38afe931794a4e9e17e74",
+    "video_emissions": "d648e6719c9be41b688d7a28d2b23a94dd62048ee650f50e495505a8240ac9a4",
+    "video_master": "0efe7fe9153adc316f3ef5673edc21930fd56b8e107457604e9e68f8d9afea7e",
+    "weather": "e4eeb32bf40cde37120aea985f373c0288d53b0f7a332e414dfe0e7611d89168"
+  },
+  "outputs": {
+    "association_and_paired_contrasts.csv": "15c819343a94424e603d0b961deb1c900f2a9d79ac266bb8f6c4008b6f305b7c",
+    "captured_clip_count_comparisons.csv": "3c60d412e3e51cc8ac1774ca6cb8728b36c6f3061d9691e0cadf4504586a462f",
+    "condition_point_estimates.csv": "484585714c34916cfa96c903462e61058164731fe61a1c4c72d0480d47aedc52",
+    "excluded_recorded_source_hours.csv": "97380bd1bee3ad2183533d30d4981ad13f285d941ddfef324cc624871c860a61",
+    "fig_recorded_correlations.png": "465dab5db9e46b5bbf38e3a6141bbe662f956f68bcdc53805daadda91e1f9225",
+    "fig_recorded_paired_advantages.png": "ac36089cdf81c8188056b674bff0bf901ab82e389db4b8086aadd57a36699386",
+    "parameters.json": "c3ef32bca81ee52604d3ee6f59d3a5c8b3cfa5ac3897ec990f861bb37f681753",
+    "partial_rank_point_estimates.csv": "ba84c687b49c586a6fc41e3b5d81f70188ef0a919556df37a8f8e500d5fc120d",
+    "recorded_hourly_panel.csv": "11d9828b677a309dd45c438c74d194d6120c6e2c74fa8f7b2c7678f6456cf5ae",
+    "summary.json": "ce163efe7fa2d9511fd9f51ca9f54ebcf1e8529e3df1498897eb7b28418c57fd",
+    "temporal_controls.csv": "833d6ca78dc3c26658b5a74349ce953f6af8e79bde20387a2b812c1e7db917e0"
+  },
+  "precipitation": "previous_hour_measurement_at_interval_end_label",
+  "rainfall_mode": "dry_only",
+  "recorded_hour_mask": "dry_at_interval_end",
+  "source_hour_exclusion": "whole_recorded_hours_containing_explicit_counting_test_clips",
+  "source_validation": "not_assessed_by_this_reanalysis",
+  "status": "recorded_aggregate_statistical_reanalysis",
+  "target_alignment": "actual_monitor_at_recorded_predictor_hour",
+  "temporal_control_selection": "recorded_mask_for_statistics_not_source_validation",
+  "temporal_day_offsets": [
+    -7,
+    -1,
+    1,
+    7
+  ]
+}

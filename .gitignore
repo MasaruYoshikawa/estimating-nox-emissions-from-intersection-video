@@ -1,0 +1,40 @@
+# Python & environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Raw media, checkpoints, and SQLite databases (not hosted in repository)
+*.mp4
+*.mkv
+*.webm
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.tflite
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.db-journal
+*.7z
+*.zip
+*.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db

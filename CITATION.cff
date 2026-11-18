@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or preserved analysis outputs, please cite it using these metadata."
+type: software
+title: "Estimating NOx Emissions from Intersection Traffic Video"
+abstract: "Pipeline and statistical evaluation comparing video-derived microscopic NOx emission indices (MOVEStar and a MOVES-derived continuous VT-CPFM-inspired formulation) against unweighted and fleet-weighted traffic counts using hourly ambient monitoring data at two Tokyo intersections."
+authors:
+  - family-names: "Yoshikawa"
+    given-names: "Masaru"
+    affiliation: "Unitec Institute of Technology"
+license: "MIT"
+repository-code: "https://github.com/MasaruYoshikawa/estimating-nox-emissions-from-intersection-video"
+version: "v1.0.0-thesis"
+date-released: "2026-11-19"
+keywords:
+  - vehicle emissions
+  - traffic video
+  - NOx
+  - MOVEStar
+  - VT-CPFM
+  - RT-DETR
+  - ByteTrack
+  - Spearman correlation

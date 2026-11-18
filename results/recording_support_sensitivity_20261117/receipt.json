@@ -1,0 +1,48 @@
+{
+  "block_lengths": [
+    1,
+    7
+  ],
+  "calculator_sha256": {
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/inference/paired_inference.py": "218f67b35d124784fcd0f066dc3500ede0b331917a7b2468cf97f68a951fe9f1",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/inference/recorded_hourly_reanalysis.py": "54b5c6210f1adf652b4cafdab8af55fcdffc496ada33de537428b14817f046bd",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/inference/recording_support.py": "8e27eec7ebd9027ee7deb4c210226deb1d6c9f2483159e432ace3f144e52b3a5"
+  },
+  "calendar_days": 61,
+  "calendar_end": "2026-06-30",
+  "calendar_start": "2026-05-01",
+  "comparison_direction": "restricted_minus_current",
+  "entry_population": "common_complete_case_all_three_existing_count_baselines",
+  "input_paths": {
+    "current_panel": "results/recorded_hourly_extension_20261109/extension_hourly_panel.csv",
+    "extension_receipt": "results/recorded_hourly_extension_20261109/receipt.json",
+    "source_manifest": "build/source_export_20261022/raw_source_export/manifest.json",
+    "video_emissions": "build/source_export_20261022/raw_source_export/video_emissions.csv",
+    "video_master": "build/source_export_20261022/raw_source_export/video_master.csv"
+  },
+  "input_sha256": {
+    "current_panel": "384eae3333004af2e96bfe5ff097f4edf89249e00549af8f4070dae66b63ebe5",
+    "extension_receipt": "258418ecb2fe8cd055abf71513d55cbee641ee99560c48cbea7be7a1b44ab3a2",
+    "source_manifest": "09c9321cca028f9ef9150b7df553c873e5000266c47c5bf70aa85419889f758b",
+    "video_emissions": "d648e6719c9be41b688d7a28d2b23a94dd62048ee650f50e495505a8240ac9a4",
+    "video_master": "0efe7fe9153adc316f3ef5673edc21930fd56b8e107457604e9e68f8d9afea7e"
+  },
+  "interval_method": "percentile_95_pointwise_descriptive",
+  "invalid_draw_rule": "retain_invalid_count_and_withhold_interval_if_any_draw_invalid",
+  "outputs": {
+    "recording_support_clips.csv": "a921fc25fe90916aeaabff144911b53f5542669ff081d5d7e886aa9fda32ccab",
+    "recording_support_hours.csv": "505c3455f2cc67f56ffe9804cc4d7662753fdcb4400eea7d08ed006eea1e999a",
+    "recording_support_inference.csv": "92199a96cd4dfc800afc64a92ec91223659a2d19d567a098776c0540b80c052d",
+    "recording_support_summary.csv": "213cd23b2a8f78317c9ce90a83f9b5ffa719d050e4a8615de98bc770c4a41259"
+  },
+  "package_versions": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1"
+  },
+  "recording_support": "recorded_start_schedule_not_continuous_media_coverage",
+  "resamples": 2000,
+  "resampling": "shared_union_calendar_nonwrapping_moving_blocks",
+  "seed": 42,
+  "support_rule": "six_records_six_distinct_starts_one_in_each_ten_minute_clock_bin"
+}

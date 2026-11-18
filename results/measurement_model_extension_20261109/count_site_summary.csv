@@ -1,0 +1,5 @@
+site,kind,manual_count,automated_count,signed_difference,absolute_difference,detail_pairs,clips,agreement_percent
+Shinjuku,classification,1041,1064,23,45,20,5,95.677233429394818
+Shinjuku,entering,1043,1065,22,46,20,5,95.589645254074782
+Sukiyabashi,classification,1500,1511,11,69,28,7,95.399999999999991
+Sukiyabashi,entering,1512,1488,-24,48,28,7,96.825396825396822

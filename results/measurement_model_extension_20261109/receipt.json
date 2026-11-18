@@ -1,0 +1,71 @@
+{
+  "calculator_sha256": {
+    "movestar.py": "5fe7aa3474a9bb6ca54cd37470b43b814046f8636d7924cce6997b48a4f8b194",
+    "thesis_diagnostics.py": "7ac2519c43978fb31fb8d88282a8e7059602fbf83e5aeafd105444fd3aa67274",
+    "vehicle_classes.py": "a8029f553221961f6219465bb365bfabe2fefad4ac5eb3ac6e483d9ea92cfe3c",
+    "vtcpfm.py": "9a37fb89c3b94d97d7581b8301b62f1a1e2253b231c177c4aa4a33ef138ffffb"
+  },
+  "count_columns": {
+    "automated": "C",
+    "manual": "B"
+  },
+  "count_metric": "100 * (1 - sum(abs(automated - manual)) / sum(manual))",
+  "inputs": {
+    "hourly_panel": {
+      "path": "results/recorded_hourly_reanalysis_20261109/recorded_hourly_panel.csv",
+      "sha256": "11d9828b677a309dd45c438c74d194d6120c6e2c74fa8f7b2c7678f6456cf5ae"
+    },
+    "video_emissions": {
+      "path": "build/source_export_20261022/raw_source_export/video_emissions.csv",
+      "sha256": "d648e6719c9be41b688d7a28d2b23a94dd62048ee650f50e495505a8240ac9a4"
+    },
+    "video_master": {
+      "path": "build/source_export_20261022/raw_source_export/video_master.csv",
+      "sha256": "0efe7fe9153adc316f3ef5673edc21930fd56b8e107457604e9e68f8d9afea7e"
+    },
+    "workbook_Shinjuku": {
+      "path": "results/Shinjuku/manual_vs_cv_counting_validation.xlsx",
+      "sha256": "5b5f5cad09450cb4aeff328f399f08286c7fd046c0b7f32316018d4f8fe418ed"
+    },
+    "workbook_Sukiyabashi": {
+      "path": "results/Sukiyabashi/manual_vs_cv_counting_validation.xlsx",
+      "sha256": "e05ec47711fd28522c27497ab530550b4f4a84fb88a8abf87469981ee254039d"
+    }
+  },
+  "model_input_sha256": {
+    "EmsRate_1.csv": "5ff9907e2d1bbbbf1a86326efa093dfb739a94bf617a221dbc422ada4d2c6228",
+    "EmsRate_13.csv": "71d76d7b029f8377f49d0729e149c44e5f95b40d6b42caddf13efe96fb5b4385",
+    "EmsRate_2.csv": "a8b4a59d3313fe0824e587762020b2c32ab7981437cb71a39685fd081edaa623",
+    "EmsRate_6.csv": "0513556d1687e905d0e1f8c1975e296a87e558d23d279b5a6a89c42c25e0550f",
+    "VehicleSrcCoeff.csv": "c4371d1cd86b762b8bf685ee15bba3bc24b41f811d05bd4d9d41d81c40a512c2"
+  },
+  "outputs": {
+    "count_category_summary.csv": "8bc7224b46fee96e32561e60007afb6d7a61d590b1028dc20d625602cbc17d22",
+    "count_clip_summary.csv": "963cb29ad185348740fa103e15e98c29353ce6003041dae312c5e0da14bc8ba5",
+    "count_detail_pairs.csv": "eac9be6a2580fdb2d7195c5f5ed21faadc54f96abb42ddad0407fbec195b417d",
+    "count_site_summary.csv": "3b7752959755ff0ede7d722452789025a3690241d2c9a3fce4d2a39397961624",
+    "fig_class_response_functions.png": "f55347d6d51ad3df6c3a14af5c2f07c1dedec53b1bb99dc4448c189dc78bea83",
+    "model_parameters.csv": "ceadd5fed716d2f55e938dac47ac761c167070881d38b0780b9da9454da069b0",
+    "model_response_states.csv": "9e161d530ddc8ffc1fece2256ce4bc143097e9e2e24127ac15050fc504d5fd9c",
+    "quadratic_aggregation_check.csv": "5d8a869f6dc2c10b522ef388750fc3480206cf3f289ce27537e84dd09097ba9b",
+    "worked_hour_clips.csv": "37f0b669e839c777c5c9cee45bc07ad18ad85dc929b6d52fa426fba4364231f8",
+    "worked_hour_summary.csv": "1794e136f4177c6a6ae75dc329a89be9f1bc497492f5a5fcedc065b60a3481be"
+  },
+  "quadratic_identity_states": [
+    3,
+    5,
+    7
+  ],
+  "response_grid": {
+    "scope": "explicit_model_states_not_observed_occupancy",
+    "speeds_kmh": [
+      25,
+      60
+    ],
+    "vsp_max": 35,
+    "vsp_min": -5,
+    "vsp_step": 0.25
+  },
+  "status": "recorded_count_agreement_and_constructed_model_diagnostics",
+  "zero_manual_total": "agreement_unavailable"
+}

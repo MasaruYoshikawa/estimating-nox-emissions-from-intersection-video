@@ -1,0 +1,40 @@
+{
+  "sukiyabashi": {
+    "site": "Sukiyabashi",
+    "route": "homography",
+    "camera_epoch": "2026-05",
+    "scale_factor_pixels_per_metre": 21.0828,
+    "image_points": [
+      [300, 480],
+      [880, 310],
+      [1180, 630],
+      [500, 900]
+    ],
+    "world_points_metres": [
+      [0.0, 0.0],
+      [27.5, 0.0],
+      [27.5, 14.7],
+      [0.0, 14.7]
+    ],
+    "description": "4-point perspective homography transformation for Sukiyabashi intersection road plane."
+  },
+  "shinjuku": {
+    "site": "Shinjuku",
+    "route": "homography",
+    "camera_epoch": "2026-05",
+    "scale_factor_pixels_per_metre": 12.4963,
+    "image_points": [
+      [400, 500],
+      [900, 350],
+      [1200, 700],
+      [550, 950]
+    ],
+    "world_points_metres": [
+      [0.0, 0.0],
+      [40.0, 0.0],
+      [40.0, 20.0],
+      [0.0, 20.0]
+    ],
+    "description": "4-point perspective homography transformation for Shinjuku intersection road plane."
+  }
+}

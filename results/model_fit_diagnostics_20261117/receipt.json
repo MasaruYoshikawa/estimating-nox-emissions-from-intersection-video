@@ -1,0 +1,31 @@
+{
+  "calculator_sha256": {
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/baselines/vtcpfm.py": "9a37fb89c3b94d97d7581b8301b62f1a1e2253b231c177c4aa4a33ef138ffffb",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/movestar.py": "5fe7aa3474a9bb6ca54cd37470b43b814046f8636d7924cce6997b48a4f8b194",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/inference/model_fit_diagnostics.py": "6d0bd93ee3b061b262c11d4a2cd534a8c6abf74670a326d6f25d3ea2a276f8a6"
+  },
+  "counterfactual": "replace only mode-40 NOx with the other heavy-class value; refit",
+  "fit": "equal-weight quadratic on idle plus nineteen positive-VSP construction points",
+  "grid_vsp_kw_per_tonne": {
+    "start": -5,
+    "step": 0.25,
+    "stop_inclusive": 80
+  },
+  "inputs": {
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/EmsRate_1.csv": "5ff9907e2d1bbbbf1a86326efa093dfb739a94bf617a221dbc422ada4d2c6228",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/EmsRate_13.csv": "71d76d7b029f8377f49d0729e149c44e5f95b40d6b42caddf13efe96fb5b4385",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/EmsRate_2.csv": "a8b4a59d3313fe0824e587762020b2c32ab7981437cb71a39685fd081edaa623",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/EmsRate_6.csv": "0513556d1687e905d0e1f8c1975e296a87e558d23d279b5a6a89c42c25e0550f",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/emissions/VehicleSrcCoeff.csv": "c4371d1cd86b762b8bf685ee15bba3bc24b41f811d05bd4d9d41d81c40a512c2"
+  },
+  "interpretation": "constructed rates, not empirical operating-state frequencies or emissions",
+  "outputs": {
+    "bus_truck_table_comparison.csv": "9af1b14edd7bd7025c916280b4407b623528b4ada3d851d89e79ee15d7127c01",
+    "fit_points.csv": "ae720cebd48b28f7e22d132180005664f559ce69494ddec949462bec569e1e75",
+    "fit_summary.csv": "7b0a6e021e211beb9e7c6554dd93f51eb677b48592404c5cfb44ae98ebaf9403",
+    "fixed_vsp_response.csv": "c1b75dd2f115ee12a59f4aa349ed3b3d0215286d3a87b546cff9ae2d2af09f73",
+    "mode40_substitution_response.csv": "6bc7e2edd522b6f99f8f320e294f5edebca50c568427a772aa5f1c8205407b3d",
+    "polynomial_roots.csv": "3205a7ff8f76c1882ab6ac3771518204636d4551829ae41e9274743203acdbb0"
+  },
+  "status": "constructed_state_model_diagnostics"
+}

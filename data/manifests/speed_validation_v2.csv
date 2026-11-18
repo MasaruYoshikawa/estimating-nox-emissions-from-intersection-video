@@ -1,0 +1,9 @@
+site,direction,image_zone,support,mae_mps,mape_pct,bias_mps,ci_low_mps,ci_high_mps
+sukiyabashi,northbound,zone_1,25,0.85,6.2,0.12,0.65,1.08
+sukiyabashi,southbound,zone_1,28,0.92,6.8,-0.15,0.71,1.15
+sukiyabashi,eastbound,zone_2,22,0.78,5.9,0.08,0.58,1.01
+sukiyabashi,westbound,zone_2,24,0.88,6.5,-0.10,0.67,1.12
+shinjuku,northbound,zone_1,30,1.05,7.4,0.22,0.82,1.31
+shinjuku,southbound,zone_1,32,1.12,7.9,-0.18,0.89,1.38
+shinjuku,eastbound,zone_2,26,0.98,7.1,0.14,0.75,1.24
+shinjuku,westbound,zone_2,28,1.08,7.6,-0.16,0.84,1.34

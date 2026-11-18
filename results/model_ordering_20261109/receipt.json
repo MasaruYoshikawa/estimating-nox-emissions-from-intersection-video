@@ -1,0 +1,21 @@
+{
+  "associations": "descriptive Spearman; finite paired covariate support; no test or interval",
+  "bands": "within-clock-hour 25th-75th percentiles; distribution bands, not confidence intervals",
+  "calculator_sha256": "fb34d19aed211ddd46d1b4d7bdcd3e14ee19519f2c8f4620aeb04a3437ffc38b",
+  "diurnal": "each predictor divided by its own n_hours-weighted overall mean; ambient ppm*1000",
+  "float_parser": "round_trip_preserves_stored_binary_values",
+  "inputs": {
+    "results/recorded_hourly_extension_20261109/diurnal_profiles.csv": "91ebed9bad95930864a2c4508a388fda9b9a30e39ad861d5630d49f27b47e4a2",
+    "results/recorded_hourly_extension_20261109/extension_hourly_panel.csv": "384eae3333004af2e96bfe5ff097f4edf89249e00549af8f4070dae66b63ebe5"
+  },
+  "outputs": {
+    "diurnal_profiles_scaled.csv": "6b1b4080a2063d82f143601ddf6a59deb6616ad6280673ea24e21ab8724ba4ad",
+    "fig_model_rank_disagreement.png": "72f5e672e25f282894edbf5f2d609b21c220792d50a7242e9f2e302228c864cd",
+    "fig_recorded_diurnal_profiles.png": "9b45684a4c21e5afdf0ccc49b847074dfab654aa5ba69a7fb0dd661416070dab",
+    "model_ordering_panel.csv": "82fdfc0a7becb8c62295470b832ed70578a1adc81d795d93202cfa95d741453a",
+    "model_ordering_summary.csv": "97765e0afd7bacf0eb19da95481a4f221c10e791744093678c29f21259e1e1a2"
+  },
+  "pairs": "unordered distinct hours; exact-value ties; five disjoint categories",
+  "quartiles": "linear interpolation (pandas default)",
+  "ranks": "site-specific average ranks of paired finite indices; continuous minus MOVEStar"
+}

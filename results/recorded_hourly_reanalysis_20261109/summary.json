@@ -1,0 +1,95 @@
+{
+  "calendar_end_date": "2026-06-30",
+  "calendar_start_date": "2026-05-01",
+  "controls": [
+    {
+      "control_rho_max": 0.20617731137229875,
+      "control_rho_mean": 0.15932645691391403,
+      "control_rho_min": 0.05717657759003721,
+      "controls": 4,
+      "model": "movestar_nox_grams",
+      "retained_hours_max": 465,
+      "retained_hours_min": 430,
+      "site": "Shinjuku"
+    },
+    {
+      "control_rho_max": 0.320696964269887,
+      "control_rho_mean": 0.25032357958818324,
+      "control_rho_min": 0.13920632935773297,
+      "controls": 4,
+      "model": "vt_cpfm_nox_grams",
+      "retained_hours_max": 465,
+      "retained_hours_min": 430,
+      "site": "Shinjuku"
+    },
+    {
+      "control_rho_max": 0.1483177333465804,
+      "control_rho_mean": 0.12145973495791992,
+      "control_rho_min": 0.06678916050128501,
+      "controls": 4,
+      "model": "movestar_nox_grams",
+      "retained_hours_max": 501,
+      "retained_hours_min": 492,
+      "site": "Sukiyabashi"
+    },
+    {
+      "control_rho_max": 0.2769170681247699,
+      "control_rho_mean": 0.248601079739009,
+      "control_rho_min": 0.21223492711242478,
+      "controls": 4,
+      "model": "vt_cpfm_nox_grams",
+      "retained_hours_max": 501,
+      "retained_hours_min": 492,
+      "site": "Sukiyabashi"
+    }
+  ],
+  "distinct_observed_calendar_dates": 61,
+  "full_union_calendar_days": 61,
+  "sites": {
+    "Shinjuku": {
+      "excluded_validation_start_hours": 0,
+      "hours_with_complete_bus_heavy_counts": 554,
+      "hours_with_complete_captured_clip_counts": 554,
+      "input_recorded_hours": 618,
+      "missing_source_precipitation": 0,
+      "model_index_aggregates": {
+        "movestar_nox_grams": {
+          "mean_recorded_index_grams": 20.895188108108105,
+          "sum_recorded_index_grams": 11596.829399999999
+        },
+        "vt_cpfm_nox_grams": {
+          "mean_recorded_index_grams": 94.13960306306306,
+          "sum_recorded_index_grams": 52247.479699999996
+        }
+      },
+      "rainy_source_intervals": 0,
+      "recorded_clips": 3331,
+      "recorded_hours": 555,
+      "recorded_trajectory_volume": 7999743,
+      "site_days": 56
+    },
+    "Sukiyabashi": {
+      "excluded_validation_start_hours": 3,
+      "hours_with_complete_bus_heavy_counts": 591,
+      "hours_with_complete_captured_clip_counts": 591,
+      "input_recorded_hours": 665,
+      "missing_source_precipitation": 0,
+      "model_index_aggregates": {
+        "movestar_nox_grams": {
+          "mean_recorded_index_grams": 14.70163389544688,
+          "sum_recorded_index_grams": 8718.0689
+        },
+        "vt_cpfm_nox_grams": {
+          "mean_recorded_index_grams": 9.988514165261384,
+          "sum_recorded_index_grams": 5923.1889
+        }
+      },
+      "rainy_source_intervals": 0,
+      "recorded_clips": 3634,
+      "recorded_hours": 593,
+      "recorded_trajectory_volume": 7357848,
+      "site_days": 60
+    }
+  },
+  "status": "recorded_aggregate_statistical_reanalysis"
+}

@@ -1,0 +1,7 @@
+intersection,station,spatial_proximity,approx_distance_meters,effective_n,movestar_r,movestar_ci_low,movestar_ci_high,vt_cpfm_r,vt_cpfm_ci_low,vt_cpfm_ci_high,count_r,count_ci_low,count_ci_high,paired_delta_r,paired_delta_ci_low,paired_delta_ci_high
+Sukiyabashi,Kasumigaseki,Roadside Station (~700m),700,665,0.2129,0.1402,0.2863,0.2994,0.226,0.3701,0.2036,0.1209,0.2828,0.0092,-0.052,0.075
+Sukiyabashi,Hibiya,Close Neighbor (~500m),500,655,0.2631,0.1907,0.3323,0.311,0.2366,0.3785,0.229,0.1562,0.3046,0.0341,-0.0306,0.0983
+Sukiyabashi,Setagaya,Distant Background (~12km),12000,665,0.187,0.1199,0.256,0.2783,0.2089,0.3523,0.1377,0.0564,0.2148,0.0493,-0.0154,0.1242
+Shinjuku,Shinjuku,Shinjuku Gyoen Monitor (~2.3km),2300,618,0.2349,0.1562,0.3088,0.3069,0.2372,0.378,0.314,0.239,0.3804,-0.079,-0.1431,-0.0172
+Shinjuku,Nakano,Distant Monitor (~3.5km),3500,609,0.2108,0.1331,0.2786,0.2418,0.1721,0.3057,0.383,0.3074,0.4465,-0.1721,-0.2408,-0.1054
+Shinjuku,Setagaya,Distant Background (~10km),10000,618,0.2603,0.1906,0.3233,0.1959,0.1221,0.2644,0.3705,0.2967,0.4357,-0.1102,-0.1726,-0.0495

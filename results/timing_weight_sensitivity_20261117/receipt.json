@@ -1,0 +1,66 @@
+{
+  "block_lengths": [
+    1,
+    7
+  ],
+  "calculator_sha256": {
+    "EmsRate_1.csv": "5ff9907e2d1bbbbf1a86326efa093dfb739a94bf617a221dbc422ada4d2c6228",
+    "EmsRate_13.csv": "71d76d7b029f8377f49d0729e149c44e5f95b40d6b42caddf13efe96fb5b4385",
+    "EmsRate_2.csv": "a8b4a59d3313fe0824e587762020b2c32ab7981437cb71a39685fd081edaa623",
+    "EmsRate_6.csv": "0513556d1687e905d0e1f8c1975e296a87e558d23d279b5a6a89c42c25e0550f",
+    "VehicleSrcCoeff.csv": "c4371d1cd86b762b8bf685ee15bba3bc24b41f811d05bd4d9d41d81c40a512c2",
+    "calculate_speeds.py": "566fb5bfcd2c578331021599cb4375ddb0ef72b81dadb3e1e4d3676022aa9534",
+    "movestar.py": "5fe7aa3474a9bb6ca54cd37470b43b814046f8636d7924cce6997b48a4f8b194",
+    "paired_inference.py": "218f67b35d124784fcd0f066dc3500ede0b331917a7b2468cf97f68a951fe9f1",
+    "recorded_hourly_extension.py": "901b757c3cad81958163b8c965f8e9a480a5afbf16c6529d480792ec2da2cfbf",
+    "recorded_hourly_reanalysis.py": "54b5c6210f1adf652b4cafdab8af55fcdffc496ada33de537428b14817f046bd",
+    "recording_support.py": "8e27eec7ebd9027ee7deb4c210226deb1d6c9f2483159e432ace3f144e52b3a5",
+    "timing_weight_sensitivity.py": "bccb0a8a4df9f42f1374769144087df38338f02b94f7d61b38dd512bbc6be18c",
+    "vehicle_classes.py": "a8029f553221961f6219465bb365bfabe2fefad4ac5eb3ac6e483d9ea92cfe3c"
+  },
+  "calendar_end": "2026-06-30",
+  "calendar_start": "2026-05-01",
+  "input_paths": {
+    "core_membership": "results/recording_support_sensitivity_20261117/recording_support_clips.csv",
+    "current_panel": "results/recorded_hourly_extension_20261109/extension_hourly_panel.csv",
+    "extension_receipt": "results/recorded_hourly_extension_20261109/receipt.json",
+    "membership_receipt": "results/recording_support_sensitivity_20261117/receipt.json",
+    "source_manifest": "build/source_export_20261022/raw_source_export/manifest.json",
+    "video_emissions": "build/source_export_20261022/raw_source_export/video_emissions.csv",
+    "video_master": "build/source_export_20261022/raw_source_export/video_master.csv"
+  },
+  "input_sha256": {
+    "core_membership": "a921fc25fe90916aeaabff144911b53f5542669ff081d5d7e886aa9fda32ccab",
+    "current_panel": "384eae3333004af2e96bfe5ff097f4edf89249e00549af8f4070dae66b63ebe5",
+    "extension_receipt": "258418ecb2fe8cd055abf71513d55cbee641ee99560c48cbea7be7a1b44ab3a2",
+    "membership_receipt": "92f7f18295a96d97f1bb8092be0ebfae443811ade545ff2fd55ce16c42890f60",
+    "source_manifest": "09c9321cca028f9ef9150b7df553c873e5000266c47c5bf70aa85419889f758b",
+    "video_emissions": "d648e6719c9be41b688d7a28d2b23a94dd62048ee650f50e495505a8240ac9a4",
+    "video_master": "0efe7fe9153adc316f3ef5673edc21930fd56b8e107457604e9e68f8d9afea7e"
+  },
+  "interval_method": "percentile_95_pointwise_descriptive",
+  "invalid_draw_rule": "retain_invalid_count_and_withhold_interval_if_any_draw_invalid",
+  "outputs": {
+    "fixed_class_weights.csv": "b0e7b688664c9073caf25e05e37a56f77e75da815cbe3309a6c43de5c61d387e",
+    "profile_entry_units.csv": "65609cbab8176863735ad85dd8765e50bbfd089aa8a12c47a7177e9c6ebccdd6",
+    "timing_by_hour.csv": "7f2ae8f01b1bd36ea40a13047c19bb81f8af9bc742b96c81260a1be26f0d37e0",
+    "timing_clips.csv": "c3c35f40e921a0bc364200bde95c9e310e0352831aad25ee63828337144d550c",
+    "timing_summary.csv": "d4b4081ea586732d0b71ad6d1837de975cf469e592fc0dd4bca6860b4ca848a1",
+    "weight_sensitivity.csv": "730e83bee5cea41902d6666b4526527914df9838d02a6be9924cc7f3d6887f18"
+  },
+  "package_versions": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1"
+  },
+  "reference_speeds_kmh": [
+    15,
+    25,
+    40
+  ],
+  "resamples": 2000,
+  "resampling": "shared_union_calendar_nonwrapping_moving_blocks",
+  "seed": 42,
+  "timing_definition": "media_metadata_and_retained_scalar_arithmetic_not_wall_clock_coverage",
+  "weight_population": "same_class_complete_hours_for_every_fixed_speed_and_model"
+}

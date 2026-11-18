@@ -1,0 +1,5 @@
+class_id,project_class,native_vehicle_type,reference_speed_kmh,reference_acceleration_mps2,reference_nox_g_per_second,normalised_weight
+0,bus,6,25,0,0.00051378611061308121,11.749799884429306
+1,car,1,25,0,4.3727222222222222e-05,1
+2,heavy_truck,13,25,0,0.00051378611061308121,11.749799884429306
+3,light_truck,2,25,0,4.3120277777777783e-05,0.98611975758807779

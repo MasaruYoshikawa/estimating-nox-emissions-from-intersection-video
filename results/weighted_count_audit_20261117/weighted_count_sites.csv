@@ -1,0 +1,3 @@
+site,clips,class_cells,manual_count,automated_count,absolute_cell_difference,weighted_manual_count,weighted_automated_count,weighted_signed_difference,weighted_absolute_cell_difference,sum_absolute_weighted_clip_net_difference,absolute_weighted_site_net_difference,relative_weighted_absolute_cell_difference,relative_unweighted_absolute_cell_difference
+Shinjuku,5,20,1041,1064,45,1351.3561724072576,1309.6352892220912,-41.720883185166592,152.2759149657023,114.47023835946922,41.720883185166592,0.112683775066083,0.043227665706051875
+Sukiyabashi,7,28,1500,1511,69,2143.5028071276829,2229.5432026825092,86.040395554826318,165.45671386921339,100.56855627079155,86.040395554826318,0.077189875058259055,0.045999999999999999
