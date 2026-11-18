@@ -20,3 +20,17 @@ keywords:
   - RT-DETR
   - ByteTrack
   - Spearman correlation
+preferred-citation:
+  type: thesis
+  thesis-type: "Master's thesis"
+  title: "Video-Based Vehicle NOx Emission Estimation at Two Tokyo Intersections Evaluated Against Ambient Air Quality Monitoring"
+  authors:
+    - family-names: "Yoshikawa"
+      given-names: "Masaru"
+      affiliation: "Unitec Institute of Technology"
+  institution:
+    name: "Unitec Institute of Technology"
+    city: "Auckland"
+    country: "NZ"
+  year: 2026
+  month: 11

@@ -4,7 +4,7 @@ Code, verification suite, and preserved numerical outputs accompanying the
 Master's thesis:
 
 > *Video-Based Vehicle NOx Emission Estimation at Two Tokyo Intersections Evaluated Against Ambient Air Quality Monitoring*
-> Masaru Yoshikawa, Unitec Institute of Technology (2026)
+> Masaru Yoshikawa, Unitec Institute of Technology (November 2026)
 
 [![CI](https://github.com/MasaruYoshikawa/estimating-nox-emissions-from-intersection-video/actions/workflows/ci.yml/badge.svg)](https://github.com/MasaruYoshikawa/estimating-nox-emissions-from-intersection-video/actions/workflows/ci.yml)
 
@@ -18,8 +18,10 @@ rank associations with urban ambient air quality monitoring than unweighted and
 class-weighted traffic counts.
 
 - **Sites & Period**: Sukiyabashi (Ginza, paired with Kasumigaseki station) and
-  Shinjuku O-Guard West (paired with Shinjuku Gyoen station), May–June 2026
-  (`1,148` dry-weather hours across `61` calendar dates).
+  Shinjuku O-Guard West (paired with Shinjuku Gyoen station), with the Setagaya
+  residential general-ambient station providing the regional background series;
+  May–June 2026 (`1,148` dry-weather hours, `09:00`–`20:00 JST` hourly starts
+  across `61` calendar dates).
 - **Computer Vision**: Fine-tuned **RT-DETR** four-class detector (car, light
   truck, bus, heavy truck) + **ByteTrack** multi-object tracker + virtual
   entry-line crossing counters + single-chord pixel-to-metre speed scaling.
@@ -141,14 +143,16 @@ Released under the [MIT License](LICENSE).
 ## Citation
 
 If you use this codebase or preserved outputs, please use GitHub's **"Cite this
-repository"** button (`CITATION.cff`) or cite:
+repository"** button (`CITATION.cff`) or cite the Master's thesis:
 
 ```bibtex
-@software{yoshikawa2026estimating_nox_video,
-  author  = {Yoshikawa, Masaru},
-  title   = {Estimating NOx Emissions from Intersection Traffic Video},
+@mastersthesis{yoshikawa2026estimating_nox_video,
+  title   = {Video-Based Vehicle NOx Emission Estimation at Two Tokyo Intersections Evaluated Against Ambient Air Quality Monitoring},
+  author  = {Masaru Yoshikawa},
+  school  = {Unitec Institute of Technology},
   year    = {2026},
-  version = {v1.0.0-thesis},
-  url     = {https://github.com/MasaruYoshikawa/estimating-nox-emissions-from-intersection-video}
+  month   = Nov,
+  type    = {Master's thesis},
+  address = {Auckland, New Zealand}
 }
 ```
