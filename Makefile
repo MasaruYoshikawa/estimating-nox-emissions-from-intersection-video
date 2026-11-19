@@ -1,8 +1,14 @@
-.PHONY: env env-vision data source-export source-reconcile thesis-analysis thesis-extension thesis-diagnostics thesis-ordering thesis-figures thesis-figure-refresh thesis-recording-support thesis-weighted-audit thesis-model-fit thesis-timing-weights pipeline-smoke pipeline-v4-smoke test lint format all calibrated-speeds calibrated-speeds-replay robustness robustness-replay clean
+.DEFAULT_GOAL := replay-statistics
+.PHONY: env env-vision data source-export source-reconcile source-analysis replay-statistics thesis-analysis thesis-extension thesis-diagnostics thesis-ordering thesis-figures thesis-figure-refresh thesis-recording-support thesis-weighted-audit thesis-model-fit thesis-timing-weights pipeline-smoke pipeline-v4-smoke test lint format all calibrated-speeds calibrated-speeds-replay robustness robustness-replay clean
 
 PYTHON ?= python3.11
 VENV ?= .venv
 PROJECT_PYTHON = PYTHONPATH=$(CURDIR)/src $(PYTHON)
+REPLAY_PANEL ?= results/monitor_quality_reanalysis_20261119/extension_hourly_panel.csv
+REPLAY_OUTPUT ?= build/panel_replay
+REPLAY_CORE_RESAMPLES ?= 20000
+REPLAY_EXTENSION_RESAMPLES ?= 2000
+REPLAY_EXPECTED_BUNDLE ?=
 PREFLIGHT_REPORT ?= build/data_preflight.json
 ANALYSIS_CONFIG ?= data/manifests/analysis-config-v4.json
 ANALYSIS_OUTPUT ?= build/analysis_v4
@@ -23,12 +29,12 @@ EXTENSION_CORE_RESAMPLES ?= 20000
 EXTENSION_RESAMPLES ?= 2000
 DIAGNOSTIC_PANEL ?= $(EXTENSION_BASE)/recorded_hourly_panel.csv
 DIAGNOSTIC_OUTPUT ?= build/thesis_diagnostics
-ORDERING_SOURCE ?= results/recorded_hourly_extension_20261109
+ORDERING_SOURCE ?= results/monitor_quality_reanalysis_20261119
 ORDERING_OUTPUT ?= build/thesis_ordering
-FIGURE_EXTENSION ?= results/recorded_hourly_extension_20261109
+FIGURE_EXTENSION ?= results/monitor_quality_reanalysis_20261119
 FIGURE_MEASUREMENT ?= results/measurement_model_extension_20261109
 FIGURE_OUTPUT ?= build/thesis_additional_figures
-FIGURE_ORDERING ?= results/model_ordering_20261109
+FIGURE_ORDERING ?= results/monitor_quality_ordering_20261119
 FIGURE_PROFILE ?= results/thesis_figure_refresh_20261117/fig_model_profile_response_checked.png
 FIGURE_REFRESH_OUTPUT ?= build/thesis_figure_refresh
 RECORDING_SUPPORT_OUTPUT ?= build/thesis_recording_support
@@ -137,7 +143,16 @@ format:
 	$(PYTHON) -m ruff check --fix src tests
 	$(PYTHON) -m black src tests
 
-all:
+all: replay-statistics
+
+replay-statistics:
+	$(PROJECT_PYTHON) -m vehicle_emission.inference.panel_replay \
+		--panel "$(REPLAY_PANEL)" --output-directory "$(REPLAY_OUTPUT)" \
+		--core-resamples $(REPLAY_CORE_RESAMPLES) \
+		--extension-resamples $(REPLAY_EXTENSION_RESAMPLES) --seed 42 \
+		$(if $(REPLAY_EXPECTED_BUNDLE),--expected-bundle "$(REPLAY_EXPECTED_BUNDLE)")
+
+source-analysis:
 	$(PROJECT_PYTHON) -m vehicle_emission.inference.frozen_analysis execute-v4 \
 		--config $(ANALYSIS_CONFIG) \
 		--output-directory $(ANALYSIS_OUTPUT) \

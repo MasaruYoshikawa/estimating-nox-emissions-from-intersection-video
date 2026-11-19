@@ -13,8 +13,8 @@ from vehicle_emission.speed.calibration import (
 )
 
 
-def test_site_calibration_v2_schema() -> None:
-    calib_path = Path("data/calibration/site_calibration_v2.json")
+def test_legacy_calibration_example_schema() -> None:
+    calib_path = Path("tests/fixtures/legacy/site_calibration_v2.json")
     assert calib_path.is_file()
 
     with calib_path.open("r", encoding="utf-8") as f:

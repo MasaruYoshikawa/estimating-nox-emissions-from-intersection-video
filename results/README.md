@@ -1,10 +1,29 @@
-# Preserved Result Bundles
+# Result bundles
 
 This directory contains the derived numerical outputs, SHA-256 receipts,
 validation workbooks, and rendered figures supporting the Master's thesis and
 companion publications.
 
-## Primary & Sensitivity Bundles
+## Current monitoring-quality calculation
+
+`monitor_quality_reanalysis_20261119/` contains the quality-corrected hourly
+panel and recalculated paired statistics. Run `make replay-statistics` to
+recompute its tables from the included panel. Exact cohort counts, exclusions
+and source-quality evidence are recorded in the bundle.
+
+The matching figure and model-ordering bundles are
+`monitor_quality_figures_20261119/` and
+`monitor_quality_ordering_20261119/`. Source-dependent condition, recording-
+schedule and timing/weight checks are in
+`monitor_quality_supplements_20261119/`; their preserved results are included,
+but recalculating those source-derived quantities requires the numeric export.
+
+The earlier bundles below preserve their original numerical values and
+receipts. Their historical counts should not be substituted for the corrected
+calculation. Original receipts are retained unchanged; use the current portable
+manifest for release-relative paths.
+
+## Preserved calculations and diagnostics
 
 | Directory | Contents |
 |---|---|
@@ -17,7 +36,7 @@ companion publications.
 | `timing_weight_sensitivity_20261117/` | Clip playable-duration clock comparisons, profile-to-entry ratios, and 15/25/40 km/h fixed-weight sensitivity. |
 | `weighted_count_audit_20261117/` | Fixed-weight manual class-count discrepancy audit. |
 | `profile_measurement_checks_20261117/` | Detector final-epoch development validation summaries. |
-| `thesis_figure_refresh_20261117/` | Final manuscript figures reproduced from the verified bundles above. |
+| `thesis_figure_refresh_20261117/` | Preserved figure refresh from the November 9 calculation. |
 | `v4_all_weather/` | All-weather hourly paired dataset used as an input for dry-weather vs. all-weather checks. |
 
 ## Manual Validation Workbooks

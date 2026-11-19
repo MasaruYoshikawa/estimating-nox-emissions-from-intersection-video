@@ -1,0 +1,23 @@
+{
+  "calculator_sha256": "b3753609102809b0df8698a03aef6353a29c88bc7748ae2a0768846fa733aea5",
+  "documentation": "https://www.taiki.kankyo.metro.tokyo.lg.jp/taikikankyo5g/apiguid/index.html",
+  "matched_source_rows": 1464,
+  "missing_cause": "not specified by the hourly response",
+  "missing_rows": 20,
+  "monitoring_place": "Setagaya",
+  "numeric_mismatches": 0,
+  "original_source_sha256": "b3582b64177bb4073e71e55dcd9b8852a5ad8e0ef942e6e29a3f6c6aa021a8d2",
+  "outputs": {
+    "provider_hourly.csv": "7a589e0c8c68a1820ea54d7ba9d9da312b6add58b9f0c71dd90cc344d03b9aab",
+    "provider_quality.csv": "457bd161ec93aa190f3bffcafdd9d9ce4f61984a179b87ae8edb4882deacd660"
+  },
+  "parser_sha256": "4fbb32f899a4de98f15501488ececd09d76d2d72362d76f38b30d5db46d59c1b",
+  "provider": "Tokyo Metropolitan Government",
+  "provider_rows": 1464,
+  "provider_station_id": "0110",
+  "retrieved_utc": "2026-11-19T00:29:54.433617+00:00",
+  "time": "end-labelled JST hour 1..24 mapped to UTC interval start",
+  "units": "provider ppb divided by 1000 for original ppm",
+  "url": "https://www.taiki.kankyo.metro.tokyo.lg.jp/taikikankyoapi/api/HourSokuho?startdatetime=2026050101&enddatetime=2026063024&stationid=0110&itemid=005",
+  "valid_numeric_rows": 1444
+}

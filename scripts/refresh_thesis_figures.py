@@ -139,7 +139,7 @@ def main() -> None:
     parser.add_argument(
         "--profile-image",
         type=Path,
-        default=Path("thesis/figures/fig_model_profile_response_checked_20261109.png"),
+        default=Path("results/thesis_figure_refresh_20261117/fig_model_profile_response_checked.png"),
     )
     parser.add_argument("--output-directory", type=Path, required=True)
     args = parser.parse_args()

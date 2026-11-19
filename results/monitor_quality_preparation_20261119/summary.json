@@ -1,0 +1,20 @@
+{
+  "original_hours": {
+    "Shinjuku": 555,
+    "Sukiyabashi": 593
+  },
+  "quality_actions": {
+    "exclude_receptor_hour": 8,
+    "set_background_missing": 18
+  },
+  "residual_complete_hours": {
+    "Shinjuku": 539,
+    "Sukiyabashi": 578
+  },
+  "retained_hours": {
+    "Shinjuku": 550,
+    "Sukiyabashi": 590
+  },
+  "status": "provider_quality_corrected_recorded_aggregates",
+  "unreviewed_zero_receptor_hours": {}
+}

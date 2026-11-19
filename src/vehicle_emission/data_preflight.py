@@ -108,9 +108,10 @@ REQUIRED_INPUTS: Final[tuple[InputRequirement, ...]] = (
         "a21d516aca15da57e65f35c47659c7535ad2b6b3",
     ),
     InputRequirement(
-        "data/calibration/site_calibration_v2.json",
+        "data/calibration/production_geometry.json",
         "file",
-        "Create the reviewed two-site perspective-aware calibration artefact under T-125.",
+        "Supply measured perspective-aware geometry for the optional source-speed route; "
+        "the published recorded scalar parameters are not a replacement.",
     ),
     InputRequirement(
         "data/manifests/two_site_assets_v2.json",

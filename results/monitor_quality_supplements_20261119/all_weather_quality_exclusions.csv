@@ -1,0 +1,11 @@
+site,monitor_start_utc,quality_status,provider_station_id
+Shinjuku,2026-05-07T02:00:00Z,missing,13104540
+Shinjuku,2026-05-20T00:00:00Z,missing,13104540
+Shinjuku,2026-06-02T03:00:00Z,missing,13104540
+Shinjuku,2026-06-02T04:00:00Z,missing,13104540
+Shinjuku,2026-06-17T02:00:00Z,missing,13104540
+Sukiyabashi,2026-05-13T01:00:00Z,missing,13101520
+Sukiyabashi,2026-05-18T11:00:00Z,missing,13101520
+Sukiyabashi,2026-06-12T05:00:00Z,missing,13101520
+Sukiyabashi,2026-06-12T06:00:00Z,missing,13101520
+Sukiyabashi,2026-06-26T04:00:00Z,missing,13101520

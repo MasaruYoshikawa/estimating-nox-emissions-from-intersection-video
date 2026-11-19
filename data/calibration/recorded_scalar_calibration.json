@@ -1,0 +1,26 @@
+{
+  "method": "single_chord_pixel_to_metre_scale",
+  "source_record": {
+    "repository": "https://github.com/MasaruYoshikawa/Estimating-Vehicle-Emissions-from-Intersection-Traffic-Video",
+    "commit": "bb6019298abb235bcd904f4c0829738be7bd5070",
+    "path": "coordination/JOURNAL.md",
+    "entry": "2026-09-22 — Resolution-aware speed scale factor calibration and script update"
+  },
+  "resolution_adjustment": "effective_pixels_per_metre = recorded_pixels_per_metre * video_width_pixels / reference_width_pixels",
+  "sites": {
+    "Sukiyabashi": {
+      "reference_width_pixels": 2560,
+      "reference_height_pixels": 1440,
+      "chord_length_pixels": 762.77,
+      "chord_length_metres": 36.18,
+      "recorded_pixels_per_metre": 21.0828
+    },
+    "Shinjuku": {
+      "reference_width_pixels": 1440,
+      "reference_height_pixels": 900,
+      "chord_length_pixels": 528.47,
+      "chord_length_metres": 42.29,
+      "recorded_pixels_per_metre": 12.4963
+    }
+  }
+}

@@ -241,7 +241,7 @@ def test_prepare_working_database_rejects_a_dirty_source_tree(tmp_path, monkeypa
         prepare_working_database(source_db, working, freeze)
 
 
-def test_make_all_routes_to_v4_without_unrelated_global_data_preflight() -> None:
+def test_make_all_replays_published_panel_without_private_source_inputs() -> None:
     import shutil
 
     if shutil.which("make") is None:
@@ -260,10 +260,13 @@ def test_make_all_routes_to_v4_without_unrelated_global_data_preflight() -> None
     commands = completed.stdout
 
     assert "vehicle_emission.data_preflight" not in commands
-    assert "vehicle_emission.inference.frozen_analysis execute-v4" in commands
-    assert "--config data/manifests/analysis-config-v4.json" in commands
-    assert "--output-directory build/analysis_v4" in commands
-    assert f"--repository-root {repository_root}" in commands
+    assert "vehicle_emission.inference.panel_replay" in commands
+    assert "results/monitor_quality_reanalysis_20261119/extension_hourly_panel.csv" in commands
+    assert '--output-directory "build/panel_replay"' in commands
+    assert "--core-resamples 20000" in commands
+    assert "--extension-resamples 2000 --seed 42" in commands
+    assert "frozen_analysis" not in commands
+    assert "data/results.db" not in commands
 
     forbidden_legacy_modules = (
         "vehicle_emission.reproduction prepare",

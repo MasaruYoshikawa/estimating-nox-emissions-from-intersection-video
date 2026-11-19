@@ -1,0 +1,73 @@
+{
+  "calculator_sha256": "179ca57d57c6c135c3d1fef4c4c935eee08984edd9da25ce118770dd19a4ea79",
+  "input_sha256": {
+    "data/airpollution_history/AirPollution_Shinjuku.csv": "85c14cadf71cee68fe972535b46c976481af1cb203ab82cef40c50fe09b00497",
+    "data/airpollution_history/AirPollution_Sukiyabashi.csv": "75c43a6896d28e422030a6ff59992e3a78f3aceec293dbbae873931f8e95a03e"
+  },
+  "interval_mapping": "provider date JST plus end-labelled hour minus one hour; UTC start",
+  "numeric_zero": "valid",
+  "outputs": {
+    "receptor_quality.csv": "cd8ebc38f482a4fbd66caf62799f860bf7c33ff4c243909496fb9e2bd261ae39",
+    "soramame_api_parameters.html": "1b8c77f20954c767927321ad156bf764b0847c5abd2c775faf5ea53dc90e4077",
+    "soramame_download_format.html": "34cf29b84a1f6be964baddf7d44ab1ad48f14503b9fc2dd41c213c0b959a8ede",
+    "soramame_receptor_hourly_raw.json": "829d98cc947218c5920622437cbd8b130b38cc938a348c59923ddda6ef5b3a1c",
+    "soramame_station_master_20260501.csv": "a91e2109001ef112f708e3c2fb42d2b709ccafe5d5fce59bcbc8c4a1ee250915"
+  },
+  "provider_missing_markers": [
+    "",
+    "-"
+  ],
+  "retrieved_utc": "2026-11-19T00:19:32.518275+00:00",
+  "source_reconciliation": {
+    "Shinjuku": {
+      "nonzero_source_now_missing": 0,
+      "source_rows": 1464,
+      "valid_numeric_matches": 1447,
+      "zero_coded_missing": 17
+    },
+    "Sukiyabashi": {
+      "nonzero_source_now_missing": 1,
+      "source_rows": 1464,
+      "valid_numeric_matches": 1447,
+      "zero_coded_missing": 16
+    }
+  },
+  "sources": {
+    "soramame_api_parameters.html": "https://soramame.env.go.jp/data/apiManual/3.html",
+    "soramame_download_format.html": "https://soramame.env.go.jp/data/legend/download/format.html",
+    "soramame_receptor_hourly_raw.json": "https://soramame.env.go.jp/soramame/api/data_search?Start_YM=202605&End_YM=202606&TDFKN_CD=13&SKT_CD=13101520%2C13104010%2C13104540&REQUEST_DATA=NOX%2CNO%2CNO2%2CCO%2COX",
+    "soramame_station_master_20260501.csv": "https://soramame.env.go.jp/data/map/kyokuNoudo/2026/05/01/01.csv"
+  },
+  "station_identity": [
+    {
+      "問い合わせ先": "環境省",
+      "所在地": "千代田区霞が関１－２－２",
+      "測定局コード": "13101520",
+      "測定局名称": "国設霞が関",
+      "測定局種別": "自排局",
+      "経度": "139.756389",
+      "緯度": "35.669444",
+      "都道府県コード": "13"
+    },
+    {
+      "問い合わせ先": "環境省",
+      "所在地": "新宿区内藤町１１",
+      "測定局コード": "13104010",
+      "測定局名称": "国設東京（新宿）",
+      "測定局種別": "一般局",
+      "経度": "139.716667",
+      "緯度": "35.677778",
+      "都道府県コード": "13"
+    },
+    {
+      "問い合わせ先": "環境省",
+      "所在地": "新宿区内藤町１１",
+      "測定局コード": "13104540",
+      "測定局名称": "国設新宿",
+      "測定局種別": "自排局",
+      "経度": "139.718611",
+      "緯度": "35.681389",
+      "都道府県コード": "13"
+    }
+  ]
+}

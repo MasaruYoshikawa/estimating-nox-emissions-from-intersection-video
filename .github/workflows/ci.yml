@@ -25,3 +25,10 @@ jobs:
           black --check src tests
       - name: Run test suite
         run: pytest
+      - name: Verify publication inventory
+        run: python -m scripts.publication_manifest --check
+      - name: Replay published-panel smoke
+        run: >-
+          make PYTHON=python replay-statistics
+          REPLAY_OUTPUT=build/ci_panel_replay
+          REPLAY_CORE_RESAMPLES=50 REPLAY_EXTENSION_RESAMPLES=50

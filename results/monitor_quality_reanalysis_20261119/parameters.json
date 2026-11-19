@@ -1,0 +1,40 @@
+{
+  "block_lengths": [
+    1,
+    7
+  ],
+  "calendar_end_date": "2026-06-30",
+  "calendar_start_date": "2026-05-01",
+  "core_family_size": 10,
+  "core_interval_family": "two_models_two_sites_associations_and_paired_advantages",
+  "core_resamples": 20000,
+  "extension_interval_family": "pointwise_descriptive",
+  "extension_resamples": 2000,
+  "floating_point_parser": "round_trip",
+  "full_union_calendar_days": 61,
+  "input_layer": "prepared_recorded_hour_aggregates",
+  "input_sha256": {
+    "extension_hourly_panel.csv": "9f9ec74ccb513b8cc3b94a0d5efdbdc63a0ee8ad23ecbd1df8057b985be578c1"
+  },
+  "residual_stages": [
+    "marginal",
+    "calendar",
+    "calendar_traffic",
+    "calendar_traffic_regional"
+  ],
+  "residual_support": "derived_common_complete_case_all_stages",
+  "runtime": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1"
+  },
+  "seed": 42,
+  "source_measurement_validation": "not_performed_by_statistical_replay",
+  "status": "prepared_panel_statistical_replay",
+  "temporal_day_offsets": [
+    -7,
+    -1,
+    1,
+    7
+  ]
+}

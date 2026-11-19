@@ -1,0 +1,25 @@
+{
+  "calculator_sha256": "4fbb32f899a4de98f15501488ececd09d76d2d72362d76f38b30d5db46d59c1b",
+  "inputs": {
+    "panel": {
+      "path": "results/recorded_hourly_extension_20261109/extension_hourly_panel.csv",
+      "sha256": "384eae3333004af2e96bfe5ff097f4edf89249e00549af8f4070dae66b63ebe5"
+    },
+    "quality_0": {
+      "path": "results/setagaya_quality_sources_20261119/provider_quality.csv",
+      "sha256": "457bd161ec93aa190f3bffcafdd9d9ce4f61984a179b87ae8edb4882deacd660"
+    },
+    "quality_1": {
+      "path": "results/monitor_quality_sources_20261119/receptor_quality.csv",
+      "sha256": "cd8ebc38f482a4fbd66caf62799f860bf7c33ff4c243909496fb9e2bd261ae39"
+    }
+  },
+  "kind": "monitor_quality_preparation",
+  "numeric_zero_policy": "retain_unless_provider_marks_missing_or_uncollected",
+  "outputs": {
+    "extension_hourly_panel.csv": "9f9ec74ccb513b8cc3b94a0d5efdbdc63a0ee8ad23ecbd1df8057b985be578c1",
+    "provider_quality.csv": "5824c259e723a8ee2fa6904fc9742400b499d0ac6f386b4cdd522e5829c54015",
+    "quality_changes.csv": "2096f911ae34a9f4cd42aebce0c7e661c51651c99d06593afdc679eb27796a15",
+    "summary.json": "f52235804b2a93fcc475fd207c3946808d4f6e097af236e082dc3b825a0b28f5"
+  }
+}

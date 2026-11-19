@@ -1,149 +1,126 @@
 # Estimating NOx Emissions from Intersection Traffic Video
 
-Code, verification suite, and preserved numerical outputs accompanying the
-Master's thesis:
+Code and numerical outputs for Masaru Yoshikawa's Master's thesis at Unitec
+Institute of Technology, November 2026:
 
-> *Video-Based Vehicle NOx Emission Estimation at Two Tokyo Intersections Evaluated Against Ambient Air Quality Monitoring*
-> Masaru Yoshikawa, Unitec Institute of Technology (November 2026)
+> *Video-Based Vehicle NOx Emission Estimation at Two Tokyo Intersections
+> Evaluated Against Ambient Air Quality Monitoring*
 
 [![CI](https://github.com/MasaruYoshikawa/estimating-nox-emissions-from-intersection-video/actions/workflows/ci.yml/badge.svg)](https://github.com/MasaruYoshikawa/estimating-nox-emissions-from-intersection-video/actions/workflows/ci.yml)
 
----
+## Study
 
-## Overview
+The study compares video-derived relative NOx emission indices with traffic
+counts and hourly ambient observations at Sukiyabashi and Shinjuku O-Guard West
+in May–June 2026. The receptor stations are Kasumigaseki and National Shinjuku;
+Setagaya supplies a regional comparison series. The models are the discrete
+MOVEStar calculation and a continuous MOVES-derived, VT-CPFM-inspired NOx
+adaptation. Both use the same rate basis.
 
-This repository implements an end-to-end comparative pipeline evaluating whether
-video-derived microscopic vehicle $\text{NO}_x$ indices provide stronger hourly
-rank associations with urban ambient air quality monitoring than unweighted and
-class-weighted traffic counts.
+The quality-corrected dry-weather cohort contains 590 Sukiyabashi and 550
+Shinjuku hours across 61 calendar dates, with hourly starts from 09:00 to
+20:00 JST.
 
-- **Sites & Period**: Sukiyabashi (Ginza, paired with Kasumigaseki station) and
-  Shinjuku O-Guard West (paired with Shinjuku Gyoen station), with the Setagaya
-  residential general-ambient station providing the regional background series;
-  May–June 2026 (`1,148` dry-weather hours, `09:00`–`20:00 JST` hourly starts
-  across `61` calendar dates).
-- **Computer Vision**: Fine-tuned **RT-DETR** four-class detector (car, light
-  truck, bus, heavy truck) + **ByteTrack** multi-object tracker + virtual
-  entry-line crossing counters + single-chord pixel-to-metre speed scaling.
-- **Emission Models (Common MOVES Rate Basis)**:
-  1. **MOVEStar**: Discrete speed–VSP operating-mode lookup calculation.
-  2. **Continuous MOVES-derived model (VT-CPFM-inspired)**: Class-specific
-     quadratic polynomials fitted to the same MOVES 5.0 $\text{NO}_x$ rates,
-     with an explicit idle branch and non-negative clipping.
-- **Statistical Evaluation**: Paired Spearman rank correlations and contrasts
-  under shared 1-day cluster and 7-day calendar-block resampling (`20,000`
-  core draws; ten-estimand Bonferroni family adjustment), fixed class-weighted
-  entry benchmarks, staged rank-residual projections, between-clip speed
-  volatility (`CV_speed`), and calendar-shift diagnostics.
+Statistical comparisons use identical hours and shared calendar resamples:
+20,000 core draws, one-/seven-day blocks and a ten-estimand adjusted interval
+family. Descriptive extensions use 2,000 draws. Sample sizes and monitoring
+quality decisions are recorded in each result bundle.
 
----
+## Install
 
-## Repository Structure
-
-```text
-├── src/vehicle_emission/       # Detection, tracking, calibration, MOVEStar & continuous models, paired bootstrap inference
-├── scripts/                    # CLI helpers for figure refresh, ordering plots, and precision design
-├── tests/                      # Unit, integration, contract, and deterministic figure/diagnostic tests
-├── data/
-│   ├── airpollution_history/   # Hourly ambient NOx monitor records (Soramame-kun)
-│   ├── weather_history/        # Hourly JMA meteorological records
-│   ├── calibration/            # Camera pixel-to-metre landmark calibration configs
-│   └── manifests/              # Pipeline & analysis configurations
-├── results/                    # Preserved thesis numeric bundles, SHA-256 receipts, figures, and manual validation audits
-├── docs/                       # Reproduction, robustness, and numeric source-export guides
-├── pyproject.toml              # Package metadata and pinned CPU/vision/dev dependencies
-├── environment.yml             # Portable Conda Python 3.11 environment spec
-├── requirements-dev.lock       # Resolved CPU/test dependency lockfile
-├── CITATION.cff                # Machine-readable citation metadata
-└── LICENSE                     # MIT License
-```
-
----
-
-## Installation
-
-Python **3.11** is required. Create and activate an isolated environment:
-
-```bash
-conda env create -f environment.yml
-conda activate vehicle-emission
-```
-
-Or with `venv` + `pip`:
+Use Python 3.11:
 
 ```bash
 python3.11 -m venv .venv
-source .venv/bin/activate        # Windows PowerShell: .venv\Scripts\Activate.ps1
-pip install --upgrade pip==25.0.1
-pip install -r requirements-dev.lock
-pip install --no-deps -e .
+source .venv/bin/activate
+python -m pip install --upgrade pip==25.0.1
+python -m pip install -r requirements-dev.lock
+python -m pip install --no-deps -e .
 ```
 
-*(Optional GPU inference dependencies for video detection/tracking: `pip install -e .[vision]`.)*
+On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1`.
+Alternatively, use `conda env create -f environment.yml` followed by
+`conda activate vehicle-emission`. Optional video-inference dependencies are
+installed with `python -m pip install -e '.[vision]'`.
 
----
+## Recalculate the published statistics
 
-## Quick Verification & Smoke Runs
-
-Run linting and the automated test suite:
+After installation, run:
 
 ```bash
-ruff check src tests
-black --check src tests
-pytest
+make PYTHON=python replay-statistics
 ```
 
-Run the synthetic smoke pipelines and deterministic diagnostics (writing to a
-fresh directory under `build/`):
+`make PYTHON=python all` is the same command. It recalculates the paired
+statistics and descriptive tables from the included quality-corrected hourly
+panel into `build/panel_replay/`. No video, database, detector checkpoint or
+network request is needed. Output directories must be fresh; use
+`REPLAY_OUTPUT=build/panel_replay_02` for another run.
+
+The [calculation guide](docs/thesis-reproduction.md) distinguishes this public
+statistical replay from source reconstruction and explains the output files.
+
+## Verify the software
 
 ```bash
-PYTHONPATH=src python -m vehicle_emission.reproduction smoke --output-dir build/pipeline_smoke
-PYTHONPATH=src python -m vehicle_emission.inference.v4_smoke --output-directory build/v4_controlled_smoke
-PYTHONPATH=src python -m vehicle_emission.inference.model_fit_diagnostics --output-directory build/model_fit_replay
+python -m ruff check src tests
+python -m black --check src tests
+python -m pytest
 ```
 
-Reproduce the manuscript figures directly from the preserved bundles in `results/`:
+Run a controlled pipeline smoke or model-response diagnostic separately:
 
 ```bash
-PYTHONPATH=src python -m scripts.refresh_thesis_figures \
-  --extension-directory results/recorded_hourly_extension_20261109 \
-  --measurement-directory results/measurement_model_extension_20261109 \
-  --ordering-directory results/model_ordering_20261109 \
-  --profile-image results/thesis_figure_refresh_20261117/fig_model_profile_response_checked.png \
-  --output-directory build/thesis_figure_refresh
+make PYTHON=python pipeline-smoke
+make PYTHON=python pipeline-v4-smoke
+make PYTHON=python thesis-model-fit
 ```
 
-See [docs/thesis-reproduction.md](docs/thesis-reproduction.md) and
-[docs/kinematics-robustness.md](docs/kinematics-robustness.md) for the full
-re-analysis commands from an exported numeric bundle (`SOURCE_BUNDLE`).
+These are software/constructed-state checks, not new empirical findings.
 
----
+## Reproduce figures
 
-## Data Availability
+The current figures can be regenerated without private source data:
 
-- **Included in this repository**: Hourly ambient $\text{NO}_x$ and JMA
-  meteorological histories (`data/airpollution_history/`, `data/weather_history/`),
-  landmark camera calibration parameters (`data/calibration/`), EPA MOVES 5.0
-  extracted lookup tables (`src/vehicle_emission/emissions/`), manual 12-clip
-  count audits (`results/*/manual_vs_cv_counting_validation.xlsx`), and all
-  derived thesis numeric result bundles with SHA-256 provenance receipts (`results/`).
-- **Excluded from version control**: Raw intersection video recordings
-  (`*.mp4`), trained neural-network checkpoint weights (`*.pt`), and full
-  per-trajectory SQLite databases (`*.db`) are excluded due to file size and
-  privacy/broadcast terms of the public livestreams. All statistical comparisons,
-  paired bootstrap intervals, sensitivity checks, and publication figures can be
-  audited and replayed from the preserved numeric bundles without raw video.
+```bash
+make PYTHON=python thesis-figure-refresh
+```
 
----
+See [results/README.md](results/README.md) for current and historical bundles.
+Historical receipts and output bytes are retained; new calculations use new
+directories.
 
-## License
+The portable inventory is `results/publication_manifest_20261119.json`. Check
+the package's recorded file identities with
+`python -m scripts.publication_manifest --check`.
 
-Released under the [MIT License](LICENSE).
+## Included data and source-dependent tools
 
-## Citation
+The repository includes hourly monitoring and weather histories, prepared
+analysis panels, extracted emission-rate tables, aggregate manual count audits,
+recorded scalar calibration parameters and result receipts. See
+[data/README.md](data/README.md) for sources, units, time conventions and quality
+handling, and [data/calibration/README.md](data/calibration/README.md) for the
+camera parameters actually recorded for this study.
 
-If you use this codebase or preserved outputs, please use GitHub's **"Cite this
-repository"** button (`CITATION.cff`) or cite the Master's thesis:
+Raw videos, trained weights, per-trajectory databases and the numeric source
+export are not included. Source-export, source-analysis, calibrated-speed and
+detector-log commands are optional tools for users who hold their required
+inputs; they are not fresh-copy reproduction steps. Their inputs are described
+in the [source-export guide](docs/source-export.md) and
+[speed/robustness guide](docs/kinematics-robustness.md).
+
+Legacy unverified examples are isolated in `tests/fixtures/legacy/`. Historical
+fixed-value writers are outside the installed package in `archive/legacy/`.
+Neither supplies the current statistical results.
+
+## Attribution and citation
+
+Project-authored software is distributed under the [MIT License](LICENSE).
+Third-party model and data attribution is recorded in [NOTICE.md](NOTICE.md);
+the project licence does not replace providers' terms.
+
+Use GitHub's **Cite this repository** button or the following thesis reference:
 
 ```bibtex
 @mastersthesis{yoshikawa2026estimating_nox_video,
@@ -156,3 +133,7 @@ repository"** button (`CITATION.cff`) or cite the Master's thesis:
   address = {Auckland, New Zealand}
 }
 ```
+
+For code reproducibility, record the exact commit used. The existing
+`v1.0.0-thesis` tag identifies the initial publication snapshot, not subsequent
+updates on `main`.

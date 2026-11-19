@@ -1,0 +1,5 @@
+site,model,controlled_predictor,n_hours,partial_rank_correlation
+Shinjuku,movestar_nox_grams,vehicle_count,550,0.059765511306151771
+Shinjuku,vt_cpfm_nox_grams,vehicle_count,550,0.20832460628028562
+Sukiyabashi,movestar_nox_grams,vehicle_count,590,0.15628298759394502
+Sukiyabashi,vt_cpfm_nox_grams,vehicle_count,590,0.30119877260186645

@@ -1,0 +1,72 @@
+{
+  "block_lengths": [
+    1,
+    7
+  ],
+  "calculator_sha256": {
+    "src/vehicle_emission/emissions/EmsRate_1.csv": "5ff9907e2d1bbbbf1a86326efa093dfb739a94bf617a221dbc422ada4d2c6228",
+    "src/vehicle_emission/emissions/EmsRate_13.csv": "71d76d7b029f8377f49d0729e149c44e5f95b40d6b42caddf13efe96fb5b4385",
+    "src/vehicle_emission/emissions/EmsRate_2.csv": "a8b4a59d3313fe0824e587762020b2c32ab7981437cb71a39685fd081edaa623",
+    "src/vehicle_emission/emissions/EmsRate_6.csv": "0513556d1687e905d0e1f8c1975e296a87e558d23d279b5a6a89c42c25e0550f",
+    "src/vehicle_emission/emissions/VehicleSrcCoeff.csv": "c4371d1cd86b762b8bf685ee15bba3bc24b41f811d05bd4d9d41d81c40a512c2",
+    "src/vehicle_emission/emissions/movestar.py": "5fe7aa3474a9bb6ca54cd37470b43b814046f8636d7924cce6997b48a4f8b194",
+    "src/vehicle_emission/inference/monitor_quality.py": "4fbb32f899a4de98f15501488ececd09d76d2d72362d76f38b30d5db46d59c1b",
+    "src/vehicle_emission/inference/monitor_quality_supplements.py": "b0d2d32f857ea0f4ff8e6f8adc2afd07a5a633634127dd60a957078efecea1e7",
+    "src/vehicle_emission/inference/paired_inference.py": "218f67b35d124784fcd0f066dc3500ede0b331917a7b2468cf97f68a951fe9f1",
+    "src/vehicle_emission/inference/panel_replay.py": "3844fef21fcc3a78bc2c65e31b4020dc8c0689dec9b35849f24b41005bcc218b",
+    "src/vehicle_emission/inference/recorded_hourly_extension.py": "901b757c3cad81958163b8c965f8e9a480a5afbf16c6529d480792ec2da2cfbf",
+    "src/vehicle_emission/inference/recorded_hourly_reanalysis.py": "54b5c6210f1adf652b4cafdab8af55fcdffc496ada33de537428b14817f046bd",
+    "src/vehicle_emission/inference/recording_support.py": "8e27eec7ebd9027ee7deb4c210226deb1d6c9f2483159e432ace3f144e52b3a5",
+    "src/vehicle_emission/inference/timing_weight_sensitivity.py": "bccb0a8a4df9f42f1374769144087df38338f02b94f7d61b38dd512bbc6be18c",
+    "src/vehicle_emission/robustness/temporal.py": "3b70aa2c10f01beb0186e4e51ba72f810e8b2a045125f4e6832a1222876e52f2",
+    "src/vehicle_emission/vehicle_classes.py": "a8029f553221961f6219465bb365bfabe2fefad4ac5eb3ac6e483d9ea92cfe3c"
+  },
+  "calendar_end": "2026-06-30",
+  "calendar_start": "2026-05-01",
+  "input_sha256": {
+    "air_pollution_history": "006bbfe5b1895d10ba2c30a6d0f55580e8f5b01e8cf9ed8b09724fa56f99792f",
+    "all_weather_predictor_panel": "efd97e8d15265e8b1029677cd2ec21eb1a0cc0410dc38afe931794a4e9e17e74",
+    "corrected_panel": "9f9ec74ccb513b8cc3b94a0d5efdbdc63a0ee8ad23ecbd1df8057b985be578c1",
+    "entering_count_audit": "3a86ad3c5c932842323c2868c13808370fbf24980b26dc63ff8516a2372c05b2",
+    "entering_counts": "b905540f86e00d6b896f9b1bb311d4b6f2edde92f995945d19223e014cec9b1e",
+    "provider_quality": "5824c259e723a8ee2fa6904fc9742400b499d0ac6f386b4cdd522e5829c54015",
+    "source_manifest": "09c9321cca028f9ef9150b7df553c873e5000266c47c5bf70aa85419889f758b",
+    "video_emissions": "d648e6719c9be41b688d7a28d2b23a94dd62048ee650f50e495505a8240ac9a4",
+    "video_master": "0efe7fe9153adc316f3ef5673edc21930fd56b8e107457604e9e68f8d9afea7e",
+    "weather_history": "e4eeb32bf40cde37120aea985f373c0288d53b0f7a332e414dfe0e7611d89168"
+  },
+  "interval_method": "percentile_95_pointwise_descriptive",
+  "numeric_zero_policy": "retain_unless_provider_marks_missing_or_uncollected",
+  "outputs": {
+    "all_weather_quality_exclusions.csv": "e26ac31c70099dfbecc8e02220f9d71644ca390414cd279310bf2087876a7f29",
+    "condition_point_estimates.csv": "5f7616068841eb17ab7e57c3b55a0d4d582e77e180439dbdf1f5838786c03d43",
+    "corrected_all_weather_panel.csv": "0dadf8a42c0a1b8144efe012935da6c1aac4b7d942af1de81428ba4c77e611b5",
+    "fixed_class_weights.csv": "b0e7b688664c9073caf25e05e37a56f77e75da815cbe3309a6c43de5c61d387e",
+    "parameters.json": "c6811bceb22cf7c4267fd0d72856649a3de78c4f80ce73e709ac6ba3c648b579",
+    "profile_entry_units.csv": "3d059f242425633873a6fbd0aadcf669bb17b6aa39ebc024f48c9228c30f48ff",
+    "recording_support_clips.csv": "61f8a185e4faf8f50a43d8af72bc42d6d11c6e66a57d17275f9771f770dcc98d",
+    "recording_support_hours.csv": "f9f48966dae48bc79b5434e571cab8bdb688b9c58da4496c1fb67dbfce3000a0",
+    "recording_support_inference.csv": "0f86d8e9b2a2fdc64551d08c5cfe1a84957a719e2335187c08c3b25550d0f22b",
+    "recording_support_summary.csv": "131266022f2d8e06c92d49d2210d5a47c2f04f1d8204b230e1e24f8a8f35b8e0",
+    "timing_by_hour.csv": "51ee715f3ee8b5288957b6786514f1e6eb4d38c7a432d3b02aab3c1712364397",
+    "timing_clips.csv": "98823ebe751d041fd4eb56bc49ca31bc25575e99a99ee915c741af06c1545042",
+    "timing_summary.csv": "406cb21cdf0b731d453a1536263ecbed13c203f4cafe8ff2a7cb322ad324bb48",
+    "weight_sensitivity.csv": "cb2065f43206a8e260412e97499aec50656b746f252ebec01962b3afcbad54b5"
+  },
+  "reference_speeds_kmh": [
+    15,
+    25,
+    40
+  ],
+  "resamples": 2000,
+  "resampling": "shared_union_calendar_nonwrapping_moving_blocks",
+  "runtime": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1"
+  },
+  "seed": 42,
+  "status": "provider_quality_corrected_source_supplements",
+  "support_rule": "six_records_six_distinct_starts_one_in_each_ten_minute_clock_bin",
+  "timing_definition": "media_metadata_and_retained_scalar_arithmetic_not_wall_clock_coverage"
+}

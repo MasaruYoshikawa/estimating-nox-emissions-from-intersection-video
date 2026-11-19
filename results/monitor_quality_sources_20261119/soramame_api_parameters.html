@@ -1,0 +1,179 @@
+<div class="text-themeBlack">
+    <input type="checkbox" class="none" id="api-3-c">
+    <h3 id="api-3" class="ifx-chapter-title"><label for="api-3-c">3. 利用方法について</label></h3>
+    <div class="ifx-chapter-content">
+        本サイトで提供している提供データの説明、利用方法等については、以下をご参照ください。<br>
+
+        <input type="checkbox" class="none" id="api-3-1-c">
+        <h4 id="api-3-1" class="ifx-clause-title">
+            <label for="api-3-1-c">3-1. 測定データを取得する</label>
+        </h4>
+        <div class="ifx-clause-content">
+            以下のパラメータを用いたURLによって測定データが<b>JSON形式</b>で取得できます。
+            <h5 id="api-3-1-1" class="ifx-term-title">3-1-1. パラメータ一覧</h5>
+            <table>
+                <tr>
+                    <th class="bg-themeDark ">パラメータ名称</th>
+                    <th class="bg-themeDark ">URLに入力する名前</th>
+                    <th class="bg-themeDark ">必須</th>
+                    <th class="bg-themeDark ">値の例</th>
+                    <th class="bg-themeDark ">備考</th>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">取得開始年月</th>
+                    <td class="">Start_YM</td>
+                    <td style="text-align: center;" class="">○</td>
+                    <td class="">202009</td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">取得終了年月</th>
+                    <td class="">End_YM</td>
+                    <td style="text-align: center;" class=""></td>
+                    <td class="">202010</td>
+                    <td class="">指定しない場合は現在の年月</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">都道府県コード</th>
+                    <td class="">TDFKN_CD</td>
+                    <td style="text-align: center;" class="">○</td>
+                    <td class="">03</td>
+                    <td class="">01～47のいずれか</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">測定局コード</th>
+                    <td class="">SKT_CD</td>
+                    <td style="text-align: center;" class=""></td>
+                    <td class="">03201070,<br>03201550</td>
+                    <td class="">複数の場合はカンマで区切る</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">取得項目の属性名</th>
+                    <td class="">REQUEST_DATA</td>
+                    <td style="text-align: center;" class=""></td>
+                    <td class="">SO2,NO</td>
+                    <td class="">複数の場合はカンマで区切る<br>各属性名は<a href="#api-3-1-2">以下のテーブル</a>を参照</td>
+                </tr>
+            </table>
+            <h5 id="api-3-1-2" class="ifx-term-title">3-1-2. 属性名一覧</h5>
+            <table>
+                <tr>
+                    <th class="bg-themeDark ">属性</th>
+                    <th class="bg-themeDark ">URLに入力する名前</th>
+                    <th class="bg-themeDark ">単位</th>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">二酸化硫黄</th>
+                    <td class="">SO2</td>
+                    <td class="">ppm</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">一酸化窒素</th>
+                    <td class="">NO</td>
+                    <td class="">ppm</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">二酸化窒素</th>
+                    <td class="">NO2</td>
+                    <td class="">ppm</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">窒素酸化物</th>
+                    <td class="">NOX</td>
+                    <td class="">ppm</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">一酸化炭素</th>
+                    <td class="">CO</td>
+                    <td class="">ppm</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">光化学オキシダント</th>
+                    <td class="">OX</td>
+                    <td class="">ppm</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">非メタン炭化水素</th>
+                    <td class="">NMHC</td>
+                    <td class="">ppmC</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">メタン</th>
+                    <td class="">CH4</td>
+                    <td class="">ppmC</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">全炭化水素</th>
+                    <td class="">THC</td>
+                    <td class="">ppmC</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">浮遊粒子状物質</th>
+                    <td class="">SPM</td>
+                    <td class="">mg/m3</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">微小粒子状物質</th>
+                    <td class="">PM2_5</td>
+                    <td class="">μg/m3</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">浮遊粉じん</th>
+                    <td class="">SP</td>
+                    <td class="">mg/m3</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">風向</th>
+                    <td class="">WD</td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">風速</th>
+                    <td class="">WS</td>
+                    <td class="">m/s</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">気温</th>
+                    <td class="">TEMP</td>
+                    <td class="">℃</td>
+                </tr>
+                <tr>
+                    <th class="bg-themeLight ">湿度</th>
+                    <td class="">HUM</td>
+                    <td class="">%</td>
+                </tr>
+            </table>
+            <h5 id="api-3-1-3" class="ifx-term-title">3-1-3. URLの例</h5>
+            <p style="border: 1px solid; border-radius: 4px;">「<b style="color: #3333cc;">2020年6月</b>」から<br>
+                「<b style="color: #cc3333;">2020年8月</b>」までの<br>
+                「<b style="color: #33cc33;">東京都</b>」に於ける<br>
+                「<b style="color: #3399ff;">窒素酸化物と気温</b>」のデータを取得する。</p>
+            ↓
+            <p style="border: 1px solid; border-radius: 4px;">https://soramame.env.go.jp/<br>
+                soramame/api/data_search<br>
+                ?<b style="color: #3333cc;">Start_YM=202006</b><br>
+                &<b style="color: #cc3333;">End_YM=202008</b><br>
+                &<b style="color: #33cc33;">TDFKN_CD=13</b><br>
+                &<b style="color: #3399ff;">REQUEST_DATA=NOX,TEMP</b></p>
+        </div>
+        <input type="checkbox" class="none" id="api-3-2-c">
+        <h4 id="api-3-2" class="ifx-clause-title">
+            <label for="api-3-2-c">3-2. 利用される方の個人情報について</label>
+        </h4>
+        <div class="ifx-clause-content">
+            <h5 id="api-3-2-1" class="ifx-term-title">3-2-1. APIの利用に当たって</h5>
+            <div class="ifx-clause-content">
+                利用される方のいかなる情報も提供していただくことなく、ご利用いただけます。<br>
+                また、個人情報の収集などは行いません。
+
+            </div>
+            <h5 id="api-3-2-2" class="ifx-term-title">3-2-2. 通信記録（アクセスログ）について</h5>
+            <div class="ifx-clause-content">
+                本サイトのサーバ上に記録されたアクセスログについては、利用動向の調査（例：アクセス数の集計）など，本サイトのより良い運営のために使用することはありますが，これにより個人を特定することはありません。<br>
+                ただし、サーバに対する不正アクセス、Dos攻撃等があった場合等、警察等の公的機関から法令に基づいた情報提供を求められた場合はこの限りではありません。
+
+            </div>
+        </div>
+
+    </div>
+</div>

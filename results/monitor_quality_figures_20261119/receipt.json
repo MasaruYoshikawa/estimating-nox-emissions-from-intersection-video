@@ -1,0 +1,58 @@
+{
+  "calculator_sha256": {
+    "/Users/macuser/Developer/vehicle-emission-project/scripts/refresh_thesis_figures.py": "2bb9e1904352d13c19544087e15ad61cf087116f4421b54dc38e5bf5f3581549",
+    "/Users/macuser/Developer/vehicle-emission-project/scripts/thesis_ordering_figures.py": "412843fb6ed6a229e7a04c792cf803fca5a9421053193731b7d044cddb8b0120",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/inference/recorded_hourly_extension.py": "901b757c3cad81958163b8c965f8e9a480a5afbf16c6529d480792ec2da2cfbf",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/inference/recorded_hourly_reanalysis.py": "54b5c6210f1adf652b4cafdab8af55fcdffc496ada33de537428b14817f046bd",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/measurement/thesis_diagnostics.py": "3534559ca1b166e4dadeade54eee551b8f8900916154a320280f51a6ac3480be",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/comparisons.py": "f714a6877dec0c91cfd59002bd84f7449e9fb63e34f2ce99b38923127304f122",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/evidence.py": "bfbdb2a0c19418b40bf7170ff9e99ef3a96db31f0a54e18e7eb20600dab86f09",
+    "/Users/macuser/Developer/vehicle-emission-project/src/vehicle_emission/visualisation/thesis_figures.py": "cef0775eacf8a68af1392bdb3b892afc159a567e1bef384b125e9ca1b6da8958"
+  },
+  "float_parser": "round_trip",
+  "inputs": {
+    "/Users/macuser/Developer/vehicle-emission-project/pyproject.toml": "4013e2d40f80281cad7f63c1591f4ee85e20b6e29c5a8905eafe11a5a03061dd",
+    "/Users/macuser/Developer/vehicle-emission-project/requirements-dev.lock": "f82e100cc0d6bea0faafb5ddcf294e7b389dd1ca729413bf969d468309db85e1",
+    "results/measurement_model_extension_20261109/count_detail_pairs.csv": "eac9be6a2580fdb2d7195c5f5ed21faadc54f96abb42ddad0407fbec195b417d",
+    "results/measurement_model_extension_20261109/model_response_states.csv": "9e161d530ddc8ffc1fece2256ce4bc143097e9e2e24127ac15050fc504d5fd9c",
+    "results/measurement_model_extension_20261109/receipt.json": "6a9e6279b6121c125cf2d4832087427733dc03c2c3cbefbc6fec6614b4fa7ec0",
+    "results/monitor_quality_ordering_20261119/diurnal_profiles_scaled.csv": "45e0a5615b42f2b6fdb3507660571dedea9424c5c083d479dd5842209411fca3",
+    "results/monitor_quality_ordering_20261119/model_ordering_panel.csv": "c4fd1d7758d09d93f2f791b63a4c3045a9ca414a8d695f1aba507d4f7e7d70ba",
+    "results/monitor_quality_ordering_20261119/receipt.json": "1ad75e69d745663675f6c51ca8e4a72e65dc09e3d8fbc1352eead09ab0e8d49d",
+    "results/monitor_quality_reanalysis_20261119/class_reference_weights.csv": "52202e11feddfcbe42930a2f977bb1cc599938afa6f4b5f7894f5d7c0e4a97a8",
+    "results/monitor_quality_reanalysis_20261119/core_inference.csv": "6a37ae856c1c1135667f70e0a7022d3d3fd2ef5e26ae62a970ebdfebb1f18f86",
+    "results/monitor_quality_reanalysis_20261119/count_comparisons.csv": "f8974c6d621fa87d1140c86bcbee6d1a6901d3c45bd2034d479f5bed20e83c1d",
+    "results/monitor_quality_reanalysis_20261119/extension_hourly_panel.csv": "9f9ec74ccb513b8cc3b94a0d5efdbdc63a0ee8ad23ecbd1df8057b985be578c1",
+    "results/monitor_quality_reanalysis_20261119/receipt.json": "26b4ebae298f1e85bdd7ff21f70d93672c7489781facccf08ef5da77a34d2157",
+    "results/monitor_quality_reanalysis_20261119/residual_comparisons.csv": "d8f6de2779c1c53f71727f07f55fbf708e06c1922f60ced9a115560a704515de",
+    "results/monitor_quality_reanalysis_20261119/volatility_comparisons.csv": "666f3269fb3186ecefa8c44f6aac4e6ebd178d4f53b3285faf9c3413ff33cd6d",
+    "results/thesis_figure_refresh_20261117/fig_model_profile_response_checked.png": "1da8195ff5812d396470458e335263a77ba9eab6693c9a030d412d6803721e88"
+  },
+  "kind": "thesis_presentation_refresh",
+  "outputs": {
+    "fig_block_comparison.png": "b532a7b8b4fe0604545ba31aa506406683d09e1986fb512dd29edadde97ef55f",
+    "fig_class_response_functions.png": "47cfa38c9f9ce87af37858986b8302c012b84c8e49930b17a421a2ece4c4e799",
+    "fig_core_associations.png": "92eaf2297270a8d610b7d2daacb415f5135003ec79c0f7070403c18b295c5d01",
+    "fig_fleet_count_advantages.png": "4a64a8ff74d138e3e29641ef08a847beba4fa81d054273711d3359e39ed49546",
+    "fig_fleet_weighting_contributions.png": "05b9ce315e5b50d5978b60ab92553427855fcd7c743a140f8ac84bb92a3ead30",
+    "fig_hourly_rank_associations.png": "895d48c889e5259455e382a438b4c94711d9ed8b657c49e0e3d5f075691b1aa0",
+    "fig_manual_count_discrepancies.png": "6ed38ed174d756e83e25e966616e766b5e12e3b6058f4c47210619e2e47e68c3",
+    "fig_model_profile_response_checked.png": "1da8195ff5812d396470458e335263a77ba9eab6693c9a030d412d6803721e88",
+    "fig_model_rank_disagreement.png": "1ef091d3f3bcdf53c79469d4315b8ffd68aebcf66b54e8de616d7b8c814c4e7b",
+    "fig_rank_residual_associations.png": "2d20c3e63f845d66245136d6b0f2f5a92655c61ce8593cc77293804c9ca838f0",
+    "fig_recorded_calendar_support.png": "c723ea07ab1631e23a5627cafc54004d03787085da80d7721e345caf0eaf0899",
+    "fig_recorded_diurnal_profiles.png": "a14f5924c150c8e614ef3ff7263a87c3a5b6c16501dfad37a7a331e5762ef945",
+    "fig_speed_variability_advantages.png": "4a5e8d1bca8d884bd6af6d14446cb85e29f46b9a1589b4bc70d18ef94105702d",
+    "fleet_count_comparisons.csv": "d27cdaa4208d30b239f40e3e97ec30bf5652b72b34fd86586df9dde625da3c0e",
+    "fleet_weighting_contributions.csv": "88432a901812027013ca987c313c585eae2332f41b63f4bb8ba975116f50e0f4",
+    "hourly_rank_points.csv": "ec212da3d12dc8c1c3738a3f7a230ba08d432d3d7d18cda5c70b1e62ee021a0c",
+    "hourly_rank_summary.csv": "a651b04e260a742bd74863244a0bfbed3b2d2fd10936a722399f106ac2295197",
+    "speed_variability_comparisons.csv": "b314b66d7ce2669acb0856db147b3528c3e699dd0126bc2e333d2dc8981de085"
+  },
+  "preserved_images": {
+    "fig_model_profile_response_checked.png": "results/thesis_figure_refresh_20261117/fig_model_profile_response_checked.png"
+  },
+  "profile_scope": "existing constructed-profile image copied without model execution",
+  "quartiles": "populated predictor quartiles; medians and IQRs are descriptive",
+  "uncertainty": "existing paired intervals; no inference or resampling executed"
+}

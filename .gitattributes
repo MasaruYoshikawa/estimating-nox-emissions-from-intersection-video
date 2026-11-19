@@ -4,3 +4,7 @@
 *.py text eol=lf
 *.md text eol=lf
 *.tex text eol=lf
+
+# Preserve provider bytes, including their original line endings and whitespace.
+results/monitor_quality_sources_20261119/** -text -whitespace
+results/setagaya_quality_sources_20261119/** -text -whitespace

@@ -1,6 +1,7 @@
 # Calibrated speeds and robustness checks
 
-These tools calculate fresh numeric outputs without modifying historical
+These optional tools require source tracks, timing and geometry that are not
+included in the public statistical package. They calculate fresh numeric outputs without modifying historical
 speed/emission rows or archived results. Run them on the processing host or a
 small reproducible source export. Real geometry, recording timing and
 independent reference observations are inputs, not values inferred from the
@@ -32,7 +33,7 @@ The calculation records interval speeds, duration-weighted second bins and
 separate fully covered contiguous one-second profiles. Partial seconds remain
 partial; acceleration is not interpolated across missing observations.
 Producing these records does not establish independent speed accuracy.
-Use [measurement validation](analysis-v4.md#measurement-configuration) for
+Use [reference-based measurement](#reference-based-measurement) for
 reference-based errors and per-camera/zone support.
 
 The production JSON has `schema_version: "production_speed_v4"`, an explicit
@@ -71,6 +72,27 @@ records and calibration declarations. It does not require SQLite or raw
 video and does not claim to reverify the recorded raw-source or physical
 geometry evidence. Original production verifies those source-file identities;
 independent calibration acceptance remains a separate measurement check.
+
+## Reference-based measurement
+
+This calculation requires object-matched annotations/predictions, entry-event
+references, independent speed references and their calibration segments. The
+configuration declares `schema_version: "measurement_validation_config_v4"`,
+all nine named inputs with repository-relative paths and SHA-256 values,
+matching/bootstrap parameters and the fitting-source video hashes.
+
+```bash
+python -m vehicle_emission.measurement.evaluate \
+  --config data/manifests/measurement-validation.json \
+  --output-directory build/reference_measurement
+```
+
+Supply the configuration and referenced observations locally; they are not
+included study measurements. The required fields are enforced by
+`measurement/evaluate.py` and illustrated with controlled inputs in
+`tests/test_measurement_evaluation.py`. Pre-entered MAE/F1 summaries cannot
+replace reference/prediction pairs. The legacy schema examples in
+`tests/fixtures/legacy/` are test inputs only.
 
 ## Optional robustness bundle
 

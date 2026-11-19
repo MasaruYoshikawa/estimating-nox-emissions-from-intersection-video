@@ -9,8 +9,6 @@ authors:
     affiliation: "Unitec Institute of Technology"
 license: "MIT"
 repository-code: "https://github.com/MasaruYoshikawa/estimating-nox-emissions-from-intersection-video"
-version: "v1.0.0-thesis"
-date-released: "2026-11-19"
 keywords:
   - vehicle emissions
   - traffic video
